@@ -1,0 +1,1797 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stesso® | Limpieza Especializada para Empresas — Industrial, Corporativa y Vertical</title>
+<meta name="description" content="Servicios de limpieza profesional, sanitización y tecnología aplicada (drones y robótica) para empresas. Cumplimiento REPSE, ISO 9001 y ESR. Cotización exclusiva para clientes corporativos.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  /* Stesso brand palette — primary derived from logo #169FDB */
+  --brand:#169FDB;
+  --brand-dark:#0B7DB4;
+  --brand-light:#5FC2EA;
+  --brand-soft:#E3F4FC;
+  --brand-ink:#093F5A;
+  --navy:#082236;
+  --navy-2:#0C2E48;
+  --navy-deep:#05172A;
+  --blue:#169FDB;        /* alias for backwards compat */
+  --blue-soft:#E3F4FC;
+  --teal:#00C2B0;
+  --teal-light:#7FE6D9;
+  --ink:#0B1320;
+  --muted:#5A6577;
+  --line:#E2E8EF;
+  --bg:#F4F8FB;
+  --white:#FFFFFF;
+  --gold:#E9B949;
+  --radius:14px;
+  --shadow:0 10px 30px rgba(8,34,54,.08);
+  --shadow-lg:0 30px 60px rgba(8,34,54,.18);
+  --shadow-xl:0 40px 80px rgba(8,34,54,.25);
+  --maxw:1280px;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;scroll-behavior:smooth}
+body{
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color:var(--ink);
+  background:var(--white);
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.container{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+h1,h2,h3,h4{font-family:'Plus Jakarta Sans', 'Inter', sans-serif;letter-spacing:-.5px}
+
+/* ===== B2B Bar ===== */
+.b2bbar{
+  background:linear-gradient(90deg,#05172A 0%, #082236 50%, #0C2E48 100%);
+  color:#cfd8ec;font-size:13px;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.b2bbar .container{display:flex;justify-content:space-between;align-items:center;height:42px;gap:16px;flex-wrap:wrap}
+.b2bbar strong{color:#fff}
+.b2bbar .pill{
+  display:inline-flex;align-items:center;gap:6px;padding:3px 10px;
+  background:linear-gradient(90deg,var(--teal),var(--blue));
+  border-radius:999px;font-size:11.5px;color:#fff;font-weight:800;
+  letter-spacing:1px;text-transform:uppercase;
+}
+.b2bbar a{color:#fff}
+.b2bbar a:hover{color:var(--teal-light)}
+.lang-switch{
+  display:inline-flex;align-items:center;
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.18);
+  border-radius:999px;padding:2px;margin-left:14px;
+  backdrop-filter:blur(8px);
+}
+.lang-switch button{
+  background:transparent;border:0;color:#cfd8ec;cursor:pointer;
+  font-size:11.5px;font-weight:800;letter-spacing:.6px;
+  padding:4px 12px;border-radius:999px;
+  font-family:inherit;transition:background .2s, color .2s;
+}
+.lang-switch button.active{background:var(--brand);color:#fff;box-shadow:0 4px 10px rgba(22,159,219,.4)}
+.lang-switch button:not(.active):hover{color:#fff}
+
+/* ===== Header ===== */
+header.site{
+  position:sticky;top:0;background:rgba(255,255,255,.95);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  z-index:50;border-bottom:1px solid var(--line);
+}
+.nav{display:flex;align-items:center;justify-content:space-between;height:82px;gap:24px}
+.brand{display:flex;align-items:center;gap:14px;color:var(--navy);font-weight:700}
+.brand img.brand-logo{height:32px;width:auto;display:block}
+.brand .brand-tag{
+  display:inline-flex;align-items:center;gap:5px;
+  font-size:10px;font-weight:800;color:var(--brand);
+  background:var(--brand-soft);
+  padding:5px 10px;border-radius:6px;letter-spacing:1.4px;text-transform:uppercase;
+  border:1px solid rgba(22,159,219,.18);
+}
+.brand .brand-tag::before{content:"";width:6px;height:6px;background:var(--brand);border-radius:50%}
+.foot-brand .brand img.brand-logo{filter:brightness(0) invert(1)}
+.foot-brand .brand .brand-tag{background:rgba(255,255,255,.06);color:#fff;border-color:rgba(255,255,255,.12)}
+.foot-brand .brand .brand-tag::before{background:var(--brand-light)}
+nav.primary{display:flex;align-items:center;gap:4px}
+nav.primary a{
+  padding:11px 16px;border-radius:10px;font-weight:600;font-size:14.5px;color:#1c2740;
+  transition:background .2s, color .2s
+}
+nav.primary a:hover{background:var(--blue-soft);color:var(--blue)}
+.cta-quote{
+  background:var(--navy) !important;color:#fff !important;padding:13px 22px !important;border-radius:10px;
+  font-weight:700;font-size:14px;
+  box-shadow:0 8px 18px rgba(8,34,54,.25);
+}
+.cta-quote:hover{background:var(--blue) !important;color:#fff !important;transform:translateY(-1px)}
+.menu-toggle{display:none;background:none;border:0;font-size:28px;color:var(--navy);cursor:pointer}
+
+/* ===== Hero ===== */
+.hero{
+  position:relative;overflow:hidden;
+  background:#05172A;
+  color:#fff;
+}
+.hero-bg{
+  position:absolute;inset:0;
+  background:
+    url("https://www.stesso.com.mx/uploads/carrusel-principal.webp") center/cover no-repeat;
+  filter:brightness(.45);
+}
+.hero-overlay{
+  position:absolute;inset:0;
+  background:
+    radial-gradient(1200px 700px at 90% -10%, rgba(22,159,219,.5), transparent 60%),
+    radial-gradient(900px 600px at -10% 110%, rgba(0,181,165,.4), transparent 60%),
+    linear-gradient(135deg, rgba(7,23,58,.92) 0%, rgba(8,34,54,.7) 50%, rgba(7,23,58,.6) 100%);
+}
+.hero-grid{
+  position:relative;z-index:2;
+  display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;
+  padding:64px 0 72px;width:100%;
+}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);
+  padding:7px 16px;border-radius:999px;font-size:12.5px;font-weight:700;
+  letter-spacing:.6px;color:#cfe2ff;text-transform:uppercase;
+  backdrop-filter:blur(8px);
+}
+.eyebrow .dot{width:8px;height:8px;border-radius:50%;background:var(--teal);box-shadow:0 0 10px var(--teal)}
+.hero h1{
+  font-size:clamp(38px, 5vw, 64px);line-height:1.05;margin:22px 0 22px;
+  letter-spacing:-1.5px;font-weight:800;
+}
+.hero h1 .accent{
+  color:transparent;
+  background:linear-gradient(135deg, #7FE6D9 0%, var(--brand-light) 50%, #B4D8FF 100%);
+  -webkit-background-clip:text;background-clip:text;
+}
+.hero p.lead{font-size:19px;color:#dde5f5;max-width:580px;margin:0 0 32px;line-height:1.55}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.btn{
+  display:inline-flex;align-items:center;gap:10px;padding:15px 26px;
+  border-radius:12px;font-weight:700;font-size:15px;cursor:pointer;border:0;
+  transition:transform .2s, box-shadow .25s, background .25s, color .2s;
+  text-decoration:none;
+}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{
+  background:linear-gradient(135deg, var(--teal) 0%, #00DCC8 100%);
+  color:#022;box-shadow:0 14px 30px rgba(0,181,165,.45);
+}
+.btn-primary:hover{box-shadow:0 18px 40px rgba(0,181,165,.6)}
+.btn-ghost{background:rgba(255,255,255,.06);color:#fff;border:1.5px solid rgba(255,255,255,.35);backdrop-filter:blur(8px)}
+.btn-ghost:hover{background:rgba(255,255,255,.14);border-color:#fff}
+.btn-dark{background:var(--navy);color:#fff;box-shadow:0 12px 28px rgba(8,34,54,.3)}
+.btn-dark:hover{background:var(--blue)}
+.btn-blue{background:var(--blue);color:#fff;box-shadow:0 12px 28px rgba(22,159,219,.4)}
+.btn-blue:hover{background:var(--brand-dark)}
+
+.hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:50px;max-width:580px}
+.hero-stats div{
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.12);
+  border-left:3px solid var(--teal);
+  padding:14px 18px;border-radius:10px;
+  backdrop-filter:blur(6px);
+}
+.hero-stats strong{display:block;font-size:30px;color:#fff;font-weight:800;letter-spacing:-.5px;line-height:1.1}
+.hero-stats span{color:#a8b6d4;font-size:12.5px;font-weight:500}
+
+/* Hero side card with image */
+.hero-card{
+  background:linear-gradient(160deg, rgba(255,255,255,.1), rgba(255,255,255,.03));
+  border:1px solid rgba(255,255,255,.18);border-radius:22px;padding:30px;
+  backdrop-filter: blur(14px);-webkit-backdrop-filter:blur(14px);
+  box-shadow:var(--shadow-xl);
+  position:relative;overflow:hidden;
+}
+.hero-card::before{
+  content:"";position:absolute;width:200px;height:200px;border-radius:50%;
+  background:radial-gradient(circle, rgba(0,181,165,.35), transparent 70%);
+  top:-80px;right:-80px;pointer-events:none;
+}
+.hero-card h3{margin:0 0 8px;font-size:22px;position:relative}
+.hero-card .badge-small{
+  display:inline-flex;align-items:center;gap:6px;
+  background:rgba(0,181,165,.18);color:var(--teal-light);
+  padding:4px 12px;border-radius:999px;font-size:11px;font-weight:700;
+  letter-spacing:.6px;text-transform:uppercase;margin-bottom:10px;
+}
+.hero-card p{color:#cfd8ec;font-size:14.5px;margin:0 0 20px;position:relative}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;position:relative}
+.form-grid label{display:flex;flex-direction:column;font-size:12px;color:#a8b6d4;font-weight:700;gap:6px;letter-spacing:.4px;text-transform:uppercase}
+.form-grid input, .form-grid select{
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);
+  color:#fff;padding:13px 14px;border-radius:10px;font-size:14px;outline:none;
+  font-family:inherit;transition:border-color .2s, background .2s;
+}
+.form-grid input::placeholder{color:#7d8cad}
+.form-grid input:focus, .form-grid select:focus{border-color:var(--teal);background:rgba(255,255,255,.12)}
+.form-grid .full{grid-column:1/-1}
+.form-grid option{color:#000}
+.note{font-size:12px;color:#8da0c7;margin-top:12px;display:flex;align-items:center;gap:6px}
+
+/* Floating "live" indicator — inside card (parent has overflow:hidden) */
+.live-tag{
+  position:absolute;top:14px;right:14px;z-index:3;
+  background:linear-gradient(135deg,#FF4D6D,#FF8C42);
+  color:#fff;font-size:10.5px;font-weight:800;padding:5px 11px;border-radius:999px;
+  letter-spacing:.6px;text-transform:uppercase;
+  box-shadow:0 8px 18px rgba(255,77,109,.4);
+  animation:pulse 2s ease-in-out infinite;
+}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
+
+/* ===== Marquee logos hero bottom ===== */
+.hero-logos{
+  position:relative;z-index:2;background:rgba(0,0,0,.3);
+  border-top:1px solid rgba(255,255,255,.08);backdrop-filter:blur(10px);
+  padding:18px 0;
+}
+.hero-logos-track{
+  display:flex;gap:60px;align-items:center;
+  animation:scroll 40s linear infinite;
+  width:max-content;
+}
+@keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.hero-logos img{height:30px;width:auto;opacity:.7;filter:brightness(0) invert(1);transition:opacity .25s}
+.hero-logos img:hover{opacity:1}
+
+/* ===== Trust strip / Certs ===== */
+.trust{padding:38px 0;background:linear-gradient(180deg,#fff 0%, #fafbfd 100%);border-bottom:1px solid var(--line)}
+.trust .lbl{text-align:center;font-size:12px;color:var(--muted);font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:22px}
+.cert-list{
+  display:grid;grid-template-columns:repeat(5,1fr);gap:24px;align-items:center;
+}
+.cert{
+  background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px;
+  display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px;
+  transition:transform .25s, box-shadow .25s, border-color .25s;
+}
+.cert:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:var(--blue)}
+.cert .seal-img{height:62px;width:auto;object-fit:contain}
+.cert .cert-title{font-weight:800;color:var(--navy);font-size:14px}
+.cert .cert-sub{font-size:11.5px;color:var(--muted);font-weight:600;letter-spacing:.4px;text-transform:uppercase}
+
+/* ===== Section base ===== */
+section.block{padding:70px 0}
+.section-head{max-width:820px;margin:0 auto 42px;text-align:center}
+.section-head .eyebrow{background:var(--blue-soft);color:var(--blue);border:1px solid #d9e5ff}
+.section-head .eyebrow .dot{background:var(--blue);box-shadow:0 0 8px var(--blue)}
+.section-head h2{
+  font-size:clamp(30px, 3.8vw, 48px);font-weight:800;letter-spacing:-1px;
+  margin:16px 0 16px;color:var(--navy)
+}
+.section-head h2 .accent{
+  color:transparent;
+  background:linear-gradient(135deg,var(--blue) 0%, var(--teal) 100%);
+  -webkit-background-clip:text;background-clip:text;
+}
+.section-head p{color:var(--muted);font-size:17.5px;margin:0;line-height:1.6}
+
+/* ===== Services ===== */
+.services{background:linear-gradient(180deg,#fff 0%, #F1F4FA 100%);position:relative;overflow:hidden}
+.services::before{
+  content:"";position:absolute;width:600px;height:600px;border-radius:50%;
+  background:radial-gradient(circle, rgba(22,159,219,.08), transparent 70%);
+  top:-200px;right:-200px;pointer-events:none;
+}
+.svc-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:24px;position:relative}
+.svc{
+  background:#fff;border-radius:22px;padding:0;
+  display:flex;flex-direction:column;transition:transform .35s cubic-bezier(.2,.8,.2,1), box-shadow .35s;
+  position:relative;overflow:hidden;
+  border:1px solid var(--line);
+}
+.svc:hover{transform:translateY(-8px);box-shadow:var(--shadow-xl);border-color:transparent}
+.svc.featured{grid-column:span 6}
+.svc.small{grid-column:span 4}
+.svc.wide{grid-column:span 12;display:grid;grid-template-columns:1.1fr 1fr;gap:0;color:#fff;background:linear-gradient(135deg, #082236 0%, #0C2E48 100%)}
+.svc.wide .body{padding:50px;display:flex;flex-direction:column;justify-content:center}
+.svc.wide .media{
+  background:url("https://www.stesso.com.mx/uploads/Pagina01-05_2021-02-22-182503.webp") center/cover;
+  min-height:340px;position:relative;
+}
+.svc.wide .media::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(90deg, rgba(8,34,54,.4) 0%, transparent 60%);
+}
+.svc .media-top{
+  height:200px;background-size:cover;background-position:center;
+  position:relative;
+}
+.svc .media-top::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg, transparent 50%, rgba(0,0,0,.4) 100%);
+}
+.svc .body-top{padding:28px 30px 32px;display:flex;flex-direction:column;gap:12px;flex:1}
+.svc .icon-float{
+  position:absolute;left:24px;top:174px;z-index:3;
+  width:54px;height:54px;border-radius:14px;display:grid;place-items:center;
+  background:#fff;color:var(--blue);
+  box-shadow:0 10px 24px rgba(0,0,0,.18);
+}
+.svc.small .icon-float{top:134px}
+.svc.tech .icon-float{background:linear-gradient(135deg,#082236,#0C2E48);color:var(--teal-light)}
+.svc.health .icon-float{background:linear-gradient(135deg,#fff,#FFE7EE);color:#C03A5B}
+.svc.special .icon-float{background:linear-gradient(135deg,#fff,#FDF4DC);color:#A47915}
+.svc.fixed .icon-float{background:linear-gradient(135deg,#fff,#E3EAF8);color:var(--navy)}
+.svc.alt .icon-float{background:linear-gradient(135deg,#fff,#DCFAF7);color:#017A6F}
+.svc.heights .icon-float{background:linear-gradient(135deg,#fff,#E8F0FF);color:var(--blue)}
+
+.svc h3{margin:0;font-size:23px;color:var(--navy);font-weight:800;letter-spacing:-.4px}
+.svc.wide h3{color:#fff;font-size:32px;margin-bottom:10px}
+.svc p{margin:0;color:var(--muted);font-size:15px;line-height:1.6}
+.svc.wide p{color:#cfd8ec;font-size:16.5px}
+.svc ul{margin:8px 0 0;padding-left:0;list-style:none;color:var(--ink);font-size:14.5px}
+.svc.wide ul{color:#e3e9f7}
+.svc ul li{padding:6px 0;padding-left:24px;position:relative}
+.svc ul li::before{
+  content:"";position:absolute;left:0;top:14px;width:14px;height:2px;background:var(--teal);border-radius:2px;
+}
+.svc.wide ul li::before{background:var(--teal-light)}
+.svc .more{
+  margin-top:auto;padding-top:10px;display:inline-flex;align-items:center;gap:8px;
+  color:var(--blue);font-weight:800;font-size:14.5px;
+}
+.svc.wide .more{color:var(--teal-light)}
+.badge-tech{
+  position:absolute;top:24px;right:24px;z-index:3;
+  background:rgba(0,0,0,.6);color:var(--teal-light);
+  font-size:10.5px;letter-spacing:1.2px;font-weight:800;padding:7px 14px;border-radius:999px;
+  text-transform:uppercase;backdrop-filter:blur(8px);
+  border:1px solid rgba(127,230,217,.3);
+}
+.svc.wide .badge-tech{position:relative;top:auto;right:auto;align-self:flex-start;margin-bottom:14px}
+
+/* ===== Sectors ===== */
+.sectors{background:linear-gradient(180deg,#05172A 0%, #082236 100%);color:#fff;position:relative;overflow:hidden}
+.sectors::before{
+  content:"";position:absolute;inset:0;
+  background:
+    radial-gradient(900px 500px at 100% 0%, rgba(0,181,165,.18), transparent 60%),
+    radial-gradient(700px 500px at 0% 100%, rgba(22,159,219,.18), transparent 60%);
+  pointer-events:none;
+}
+.sectors .section-head h2{color:#fff}
+.sectors .section-head .eyebrow{background:rgba(255,255,255,.08);color:var(--teal-light);border-color:rgba(127,230,217,.3)}
+.sectors .section-head .eyebrow .dot{background:var(--teal-light)}
+.sectors .section-head p{color:#a8b6d4}
+.sec-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;position:relative}
+.sector{
+  border-radius:18px;overflow:hidden;
+  position:relative;cursor:pointer;
+  height:280px;
+  border:1px solid rgba(255,255,255,.08);
+  transition:transform .35s cubic-bezier(.2,.8,.2,1), border-color .3s;
+}
+.sector:hover{transform:translateY(-6px) scale(1.02);border-color:var(--teal)}
+.sector .bg{
+  position:absolute;inset:0;background-size:cover;background-position:center;
+  transition:transform .6s cubic-bezier(.2,.8,.2,1), filter .4s;
+  filter:brightness(.55) saturate(1.1);
+}
+.sector:hover .bg{transform:scale(1.08);filter:brightness(.7) saturate(1.2)}
+.sector::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg, transparent 30%, rgba(6,18,47,.95) 100%);
+}
+.sector .content{position:absolute;inset:0;padding:24px;display:flex;flex-direction:column;justify-content:flex-end;z-index:2}
+.sector .ic{
+  position:absolute;top:24px;left:24px;
+  width:46px;height:46px;border-radius:12px;
+  background:rgba(255,255,255,.15);backdrop-filter:blur(8px);
+  display:grid;place-items:center;font-size:22px;border:1px solid rgba(255,255,255,.2);
+}
+.sector h4{margin:0 0 6px;font-size:19px;font-weight:800;color:#fff;letter-spacing:-.3px}
+.sector p{margin:0;color:#cfd8ec;font-size:13.5px;line-height:1.5}
+.sector .tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:12px}
+.sector .tag{
+  background:rgba(255,255,255,.12);backdrop-filter:blur(8px);
+  border:1px solid rgba(255,255,255,.18);
+  font-size:11px;font-weight:600;padding:3px 9px;border-radius:6px;color:#fff;
+}
+
+/* ===== Credentials ===== */
+.creds{background:#fff;position:relative;overflow:hidden}
+.creds::before{
+  content:"";position:absolute;width:800px;height:800px;border-radius:50%;
+  background:radial-gradient(circle, rgba(0,181,165,.06), transparent 70%);
+  top:-300px;left:-300px;pointer-events:none;
+}
+.creds-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center;position:relative}
+.creds-text h2{font-size:clamp(30px, 3.6vw, 44px);color:var(--navy);margin:14px 0 18px;font-weight:800;letter-spacing:-.8px}
+.creds-text > p{color:var(--muted);font-size:16.5px;margin:0 0 30px;line-height:1.6}
+.cred-row{
+  display:flex;gap:16px;margin-bottom:20px;align-items:flex-start;
+  padding:18px;border-radius:14px;
+  background:linear-gradient(180deg,#fff,#fafbfd);
+  border:1px solid var(--line);
+  transition:transform .2s, box-shadow .2s, border-color .2s;
+}
+.cred-row:hover{transform:translateX(4px);box-shadow:var(--shadow);border-color:#cfdbf4}
+.cred-row .logo-cert{
+  width:70px;height:70px;flex-shrink:0;border-radius:12px;
+  background:#fff;border:1px solid var(--line);padding:8px;
+  display:grid;place-items:center;
+}
+.cred-row .logo-cert img{max-width:100%;max-height:100%;object-fit:contain}
+.cred-row h4{margin:0 0 4px;color:var(--navy);font-weight:800;font-size:16.5px}
+.cred-row p{margin:0;font-size:14px;color:var(--muted);line-height:1.5}
+
+/* Right showcase card */
+.creds-visual{
+  background:linear-gradient(155deg, #082236 0%, var(--brand) 100%);
+  border-radius:28px;padding:0;color:#fff;position:relative;overflow:hidden;
+  box-shadow:var(--shadow-xl);min-height:560px;
+  display:flex;flex-direction:column;
+}
+.creds-visual .image-top{
+  height:240px;
+  background:url("https://www.stesso.com.mx/uploads/IMG_5001.webp") center/cover;
+  position:relative;
+}
+.creds-visual .image-top::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg, transparent 30%, #082236 100%);
+}
+.creds-visual .body-area{padding:32px 38px 38px;position:relative;z-index:2;flex:1}
+.creds-visual h3{font-size:24px;margin:0 0 8px;font-weight:800}
+.creds-visual .sub{color:#cfd8ec;font-size:14.5px;margin:0 0 24px}
+.kpi-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.kpi{
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.15);
+  padding:18px;border-radius:14px;backdrop-filter:blur(8px);
+}
+.kpi strong{
+  font-size:34px;display:block;font-weight:800;line-height:1.05;letter-spacing:-1px;
+  background:linear-gradient(135deg,#7FE6D9 0%, #B4D8FF 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.kpi span{font-size:12.5px;color:#a8b6d4;font-weight:500;display:block;margin-top:4px}
+
+/* ===== Tech section showcase (drones + robots) ===== */
+.tech-show{
+  background:#fff;position:relative;
+}
+.tech-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.tech-card{
+  border-radius:24px;overflow:hidden;position:relative;
+  min-height:480px;color:#fff;
+  display:flex;flex-direction:column;justify-content:flex-end;
+  cursor:pointer;transition:transform .4s cubic-bezier(.2,.8,.2,1);
+}
+.tech-card:hover{transform:translateY(-6px)}
+.tech-card .bg{
+  position:absolute;inset:0;background-size:cover;background-position:center;
+  transition:transform .7s cubic-bezier(.2,.8,.2,1);
+}
+.tech-card:hover .bg{transform:scale(1.07)}
+.tech-card::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg, rgba(6,18,47,.2) 0%, rgba(6,18,47,.95) 100%);
+}
+.tech-card .content{position:relative;z-index:2;padding:40px}
+.tech-card .tag{
+  display:inline-flex;align-items:center;gap:6px;
+  background:rgba(0,181,165,.25);color:#fff;
+  padding:6px 14px;border-radius:999px;font-size:11px;font-weight:800;
+  letter-spacing:1px;text-transform:uppercase;margin-bottom:14px;
+  border:1px solid rgba(127,230,217,.4);backdrop-filter:blur(8px);
+}
+.tech-card h3{font-size:32px;margin:0 0 12px;font-weight:800;letter-spacing:-.5px;color:#fff}
+.tech-card p{margin:0 0 20px;color:#cfd8ec;font-size:15.5px;line-height:1.6}
+.tech-card .specs{display:flex;gap:24px;flex-wrap:wrap;margin-top:18px;padding-top:18px;border-top:1px solid rgba(255,255,255,.15)}
+.tech-card .spec strong{display:block;color:#7FE6D9;font-size:22px;font-weight:800}
+.tech-card .spec span{color:#a8b6d4;font-size:12px}
+
+/* ===== Clients ===== */
+.clients{background:var(--bg)}
+.client-grid{
+  display:grid;grid-template-columns:repeat(6,1fr);gap:18px;
+}
+.client-card{
+  background:#fff;border:1px solid var(--line);border-radius:16px;
+  height:110px;display:grid;place-items:center;padding:20px;
+  transition:transform .25s, border-color .25s, box-shadow .25s;
+}
+.client-card:hover{transform:translateY(-4px);border-color:var(--blue);box-shadow:var(--shadow)}
+.client-card img{
+  max-height:60px;max-width:100%;width:auto;
+  object-fit:contain;
+  filter:grayscale(100%) brightness(.8);
+  opacity:.75;transition:filter .3s, opacity .3s;
+}
+.client-card:hover img{filter:grayscale(0%) brightness(1);opacity:1}
+
+/* ===== Why us ===== */
+.why{background:#fff;position:relative}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.why-card{
+  border-radius:22px;padding:36px;position:relative;overflow:hidden;
+  background:linear-gradient(180deg, #fff 0%, #fbfcfe 100%);
+  border:1px solid var(--line);
+  transition:transform .25s, box-shadow .25s;
+}
+.why-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+.why-card .num{
+  width:60px;height:60px;border-radius:16px;
+  background:linear-gradient(135deg, var(--navy) 0%, var(--blue) 100%);
+  color:#fff;
+  display:grid;place-items:center;font-weight:800;font-size:22px;margin-bottom:22px;
+  box-shadow:0 10px 22px rgba(22,159,219,.3);font-family:'Plus Jakarta Sans',sans-serif;
+}
+.why-card h4{margin:0 0 10px;color:var(--navy);font-size:20px;font-weight:800}
+.why-card p{margin:0;color:var(--muted);font-size:15px;line-height:1.6}
+.why-card .corner{
+  position:absolute;width:160px;height:160px;border-radius:50%;
+  background:radial-gradient(circle, rgba(22,159,219,.08), transparent 70%);
+  bottom:-50px;right:-50px;pointer-events:none;
+}
+
+/* ===== Testimonial ===== */
+.testimonial{
+  background:linear-gradient(135deg, #fff 0%, #F1F4FA 100%);
+  position:relative;
+}
+.testimonial-card{
+  max-width:1080px;margin:0 auto;
+  background:#fff;border-radius:28px;padding:0;
+  display:grid;grid-template-columns:1fr 1.4fr;
+  overflow:hidden;box-shadow:var(--shadow-lg);
+  border:1px solid var(--line);
+}
+.testimonial-img{
+  background:url("https://www.stesso.com.mx/uploads/Pagina01-08limpieza.webp") center/cover;
+  min-height:360px;
+  position:relative;
+}
+.testimonial-img::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(135deg, rgba(8,34,54,.3), transparent);
+}
+.testimonial-body{padding:50px 50px}
+.quote-mark{font-size:80px;line-height:1;color:var(--teal);font-family:Georgia,serif;margin-bottom:-30px}
+.testimonial-body blockquote{
+  margin:0 0 24px;font-size:21px;line-height:1.5;color:var(--navy);font-weight:600;
+  font-family:'Plus Jakarta Sans',sans-serif;letter-spacing:-.3px;
+}
+.testimonial-author{display:flex;align-items:center;gap:14px}
+.testimonial-author .avatar{
+  width:50px;height:50px;border-radius:50%;
+  background:linear-gradient(135deg,var(--blue),var(--teal));
+  display:grid;place-items:center;color:#fff;font-weight:800;font-size:16px;
+}
+.testimonial-author strong{display:block;color:var(--navy);font-size:15px}
+.testimonial-author span{color:var(--muted);font-size:13px}
+
+/* ===== Blog / Content ===== */
+.blog{background:linear-gradient(180deg,#F4F8FB 0%, #fff 100%);position:relative;overflow:hidden}
+.blog::before{
+  content:"";position:absolute;width:600px;height:600px;border-radius:50%;
+  background:radial-gradient(circle, rgba(22,159,219,.07), transparent 70%);
+  top:-200px;left:-200px;pointer-events:none;
+}
+.blog-head{
+  display:flex;justify-content:space-between;align-items:flex-end;gap:24px;
+  margin-bottom:38px;flex-wrap:wrap;
+}
+.blog-head .section-head{text-align:left;margin:0;max-width:620px}
+.blog-head .blog-all{
+  display:inline-flex;align-items:center;gap:8px;color:var(--brand);
+  font-weight:800;font-size:14.5px;padding:12px 18px;border-radius:10px;
+  background:var(--brand-soft);border:1px solid rgba(22,159,219,.18);
+  transition:background .2s, transform .2s;
+}
+.blog-head .blog-all:hover{background:var(--brand);color:#fff;transform:translateX(4px)}
+.blog-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:24px;position:relative}
+.blog-card{
+  background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;
+  display:flex;flex-direction:column;
+  transition:transform .35s cubic-bezier(.2,.8,.2,1), box-shadow .35s, border-color .25s;
+  cursor:pointer;text-decoration:none;color:inherit;
+}
+.blog-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:transparent}
+.blog-card .img-wrap{position:relative;overflow:hidden;background:#e9eef5}
+.blog-card .img-wrap img{
+  width:100%;height:100%;object-fit:cover;display:block;
+  transition:transform .6s cubic-bezier(.2,.8,.2,1);
+}
+.blog-card:hover .img-wrap img{transform:scale(1.06)}
+.blog-card.feature{grid-row:span 2;grid-column:span 1}
+.blog-card.feature .img-wrap{height:340px}
+.blog-card.small .img-wrap{height:200px}
+.blog-card .cat-tag{
+  position:absolute;top:14px;left:14px;z-index:2;
+  display:inline-flex;align-items:center;gap:6px;
+  background:rgba(255,255,255,.95);backdrop-filter:blur(8px);
+  color:var(--brand);font-size:11px;font-weight:800;
+  padding:6px 12px;border-radius:999px;letter-spacing:.6px;text-transform:uppercase;
+  box-shadow:0 4px 10px rgba(8,34,54,.15);
+}
+.blog-card .cat-tag.tech{color:#0B7DB4;background:rgba(227,244,252,.95)}
+.blog-card .cat-tag.case{color:#A47915;background:rgba(253,244,220,.95)}
+.blog-card .cat-tag.regs{color:#017A6F;background:rgba(220,250,247,.95)}
+.blog-card .cat-tag.industry{color:#C03A5B;background:rgba(255,231,238,.95)}
+.blog-card .body{padding:26px 28px 28px;display:flex;flex-direction:column;gap:12px;flex:1}
+.blog-card.feature .body{padding:32px 36px 34px}
+.blog-card .meta{
+  display:flex;align-items:center;gap:14px;color:var(--muted);
+  font-size:12.5px;font-weight:600;letter-spacing:.3px;
+}
+.blog-card .meta .dot-sep{width:4px;height:4px;border-radius:50%;background:var(--muted);opacity:.5}
+.blog-card h3{
+  margin:0;font-size:19px;line-height:1.3;color:var(--navy);font-weight:800;letter-spacing:-.3px;
+}
+.blog-card.feature h3{font-size:26px;line-height:1.2}
+.blog-card p{margin:0;color:var(--muted);font-size:14.5px;line-height:1.55}
+.blog-card .read-more{
+  margin-top:auto;display:inline-flex;align-items:center;gap:6px;
+  color:var(--brand);font-weight:800;font-size:13.5px;padding-top:6px;
+}
+.blog-card .read-more svg{transition:transform .2s}
+.blog-card:hover .read-more svg{transform:translateX(4px)}
+
+@media (max-width: 1100px){
+  .blog-grid{grid-template-columns:1fr 1fr;gap:20px}
+  .blog-card.feature{grid-row:auto;grid-column:span 2}
+  .blog-card.feature .img-wrap{height:280px}
+  .blog-head{flex-direction:column;align-items:flex-start}
+}
+@media (max-width: 720px){
+  .blog-grid{grid-template-columns:1fr}
+  .blog-card.feature{grid-column:span 1}
+}
+
+/* ===== CTA BAND ===== */
+.cta-wrap{padding:56px 0}
+.cta-band{
+  background:
+    linear-gradient(135deg, rgba(8,34,54,.92) 0%, rgba(22,159,219,.85) 100%),
+    url("https://www.stesso.com.mx/uploads/propuesta-carrusel.webp") center/cover;
+  color:#fff;border-radius:28px;padding:64px;
+  display:grid;grid-template-columns:1.4fr 1fr;gap:32px;align-items:center;
+  max-width:var(--maxw);margin:0 auto;
+  position:relative;overflow:hidden;box-shadow:var(--shadow-xl);
+}
+.cta-band::before{
+  content:"";position:absolute;width:500px;height:500px;border-radius:50%;
+  background:radial-gradient(circle, rgba(0,181,165,.35), transparent 60%);
+  right:-150px;top:-150px;
+}
+.cta-band h2{margin:0 0 12px;font-size:38px;font-weight:800;letter-spacing:-.8px;position:relative;line-height:1.1}
+.cta-band p{margin:0;color:#cfe2ff;font-size:17px;max-width:540px;position:relative;line-height:1.6}
+.cta-band .actions{display:flex;gap:14px;flex-wrap:wrap;position:relative;justify-content:flex-end}
+
+/* ===== Footer ===== */
+footer{background:linear-gradient(180deg, #05172A 0%, #030918 100%);color:#a8b6d4;padding:80px 0 0;font-size:14.5px}
+.foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:48px;padding-bottom:50px;border-bottom:1px solid rgba(255,255,255,.08)}
+footer h5{color:#fff;margin:0 0 18px;font-size:12.5px;text-transform:uppercase;letter-spacing:1.5px;font-weight:800}
+footer ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:11px}
+footer ul a{color:#a8b6d4;transition:color .2s}
+footer ul a:hover{color:var(--teal-light)}
+.foot-brand .brand{color:#fff;font-size:24px}
+.foot-brand p{margin:18px 0 0;color:#a8b6d4;max-width:320px;line-height:1.6}
+.contact-line{display:flex;align-items:center;gap:10px;margin:6px 0;color:#cfd8ec;font-size:14px}
+.contact-line strong{color:#fff}
+.social-row{display:flex;gap:10px;margin-top:18px}
+.social-row a{
+  width:38px;height:38px;border-radius:10px;display:grid;place-items:center;
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);
+  transition:background .2s, border-color .2s, transform .2s;
+}
+.social-row a:hover{background:var(--teal);border-color:var(--teal);transform:translateY(-2px)}
+.social-row svg{width:18px;height:18px;fill:#cfd8ec}
+.social-row a:hover svg{fill:#fff}
+.foot-bottom{
+  display:flex;justify-content:space-between;align-items:center;padding:28px 0;
+  font-size:13px;color:#7d8cad;flex-wrap:wrap;gap:14px;
+}
+.audience-redirect{
+  display:flex;gap:12px;font-size:12.5px;color:#7d8cad;flex-wrap:wrap;align-items:center;
+}
+.audience-redirect a{color:#7d8cad;text-decoration:underline;text-underline-offset:3px}
+.audience-redirect a:hover{color:#cfd8ec}
+
+/* Reveal animation */
+.fade-up{opacity:0;transform:translateY(30px);transition:opacity .8s ease, transform .8s ease}
+.fade-up.in{opacity:1;transform:translateY(0)}
+
+/* ===== Floating contact FAB ===== */
+.fab{
+  position:fixed;bottom:24px;right:24px;z-index:100;
+  display:flex;flex-direction:column;align-items:flex-end;gap:12px;
+  opacity:0;pointer-events:none;transform:translateY(20px);
+  transition:opacity .35s ease, transform .35s ease;
+}
+.fab.show{opacity:1;pointer-events:auto;transform:translateY(0)}
+.fab-options{
+  display:flex;flex-direction:column;align-items:flex-end;gap:10px;
+  max-height:0;overflow:hidden;
+  transition:max-height .35s cubic-bezier(.2,.8,.2,1);
+}
+.fab.open .fab-options{max-height:280px}
+.fab-option{
+  display:flex;align-items:center;gap:10px;
+  background:#fff;color:var(--navy);
+  padding:10px 16px 10px 12px;border-radius:999px;
+  font-weight:700;font-size:14px;
+  box-shadow:0 8px 22px rgba(8,34,54,.18);
+  border:1px solid var(--line);
+  cursor:pointer;text-decoration:none;
+  transform:scale(.85);opacity:0;
+  transition:transform .25s, opacity .25s, background .2s, color .2s;
+}
+.fab.open .fab-option{transform:scale(1);opacity:1}
+.fab.open .fab-option:nth-child(1){transition-delay:.05s}
+.fab.open .fab-option:nth-child(2){transition-delay:.1s}
+.fab.open .fab-option:nth-child(3){transition-delay:.15s}
+.fab-option:hover{background:var(--brand);color:#fff;border-color:var(--brand)}
+.fab-option .icon{
+  width:32px;height:32px;border-radius:50%;
+  display:grid;place-items:center;color:#fff;
+  background:var(--brand);flex-shrink:0;
+}
+.fab-option.wa .icon{background:#25D366}
+.fab-option.quote .icon{background:var(--navy)}
+.fab-option:hover .icon{background:rgba(255,255,255,.2)}
+.fab-option svg{width:16px;height:16px;fill:#fff;stroke:#fff}
+.fab-toggle{
+  display:inline-flex;align-items:center;gap:10px;
+  background:linear-gradient(135deg, var(--brand) 0%, var(--brand-dark) 100%);
+  color:#fff;border:0;cursor:pointer;
+  padding:14px 22px 14px 18px;border-radius:999px;
+  font-family:inherit;font-weight:800;font-size:14.5px;
+  box-shadow:0 14px 32px rgba(22,159,219,.42), 0 0 0 0 rgba(22,159,219,.5);
+  transition:transform .2s, box-shadow .25s;
+  position:relative;
+}
+.fab-toggle:hover{transform:translateY(-2px);box-shadow:0 18px 38px rgba(22,159,219,.55)}
+.fab-toggle .toggle-ic{
+  width:30px;height:30px;border-radius:50%;
+  background:rgba(255,255,255,.18);
+  display:grid;place-items:center;
+  transition:transform .3s;
+}
+.fab.open .fab-toggle .toggle-ic{transform:rotate(135deg)}
+.fab-toggle svg{width:16px;height:16px;stroke:#fff;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.fab-toggle::after{
+  content:"";position:absolute;inset:0;border-radius:999px;
+  box-shadow:0 0 0 0 rgba(22,159,219,.55);
+  animation:fab-ring 2.4s ease-out infinite;pointer-events:none;
+}
+.fab.open .fab-toggle::after{animation:none}
+@keyframes fab-ring{
+  0%{box-shadow:0 0 0 0 rgba(22,159,219,.55)}
+  70%{box-shadow:0 0 0 18px rgba(22,159,219,0)}
+  100%{box-shadow:0 0 0 0 rgba(22,159,219,0)}
+}
+@media (max-width:560px){
+  .fab{bottom:18px;right:18px}
+  .fab-toggle .label{display:none}
+  .fab-toggle{padding:14px;border-radius:50%}
+}
+
+/* SVG icons inline */
+.ic-svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.ic-lg{width:28px;height:28px}
+
+/* ===== Responsive ===== */
+@media (max-width: 1100px){
+  .hero{min-height:auto}
+  .hero-grid{grid-template-columns:1fr;gap:40px;padding:60px 0}
+  .creds-grid{grid-template-columns:1fr;gap:48px}
+  .svc.featured{grid-column:span 12}
+  .svc.small{grid-column:span 6}
+  .svc.wide{grid-template-columns:1fr}
+  .svc.wide .media{min-height:240px}
+  .sec-grid{grid-template-columns:repeat(2,1fr)}
+  .why-grid{grid-template-columns:1fr 1fr}
+  .client-grid{grid-template-columns:repeat(4,1fr)}
+  .cta-band{grid-template-columns:1fr;text-align:center;padding:44px}
+  .cta-band .actions{justify-content:center}
+  .foot-grid{grid-template-columns:1fr 1fr;gap:36px}
+  .cert-list{grid-template-columns:repeat(3,1fr)}
+  .tech-grid{grid-template-columns:1fr}
+  .testimonial-card{grid-template-columns:1fr}
+  .testimonial-img{min-height:220px}
+}
+@media (max-width: 720px){
+  nav.primary{display:none}
+  .menu-toggle{display:block}
+  .svc.small{grid-column:span 12}
+  .sec-grid{grid-template-columns:1fr}
+  .why-grid{grid-template-columns:1fr}
+  .client-grid{grid-template-columns:repeat(3,1fr)}
+  .foot-grid{grid-template-columns:1fr}
+  .hero-stats{grid-template-columns:1fr 1fr}
+  .form-grid{grid-template-columns:1fr}
+  section.block{padding:64px 0}
+  .b2bbar .container{justify-content:center;text-align:center}
+  .cta-band h2{font-size:26px}
+  .cta-band{padding:32px}
+  .cert-list{grid-template-columns:1fr 1fr}
+  .testimonial-body{padding:32px}
+}
+</style>
+</head>
+<body>
+
+<!-- ==== B2B AUDIENCE BAR ==== -->
+<div class="b2bbar">
+  <div class="container">
+    <span><span class="pill">B2B</span> &nbsp;<span data-i18n="b2bbar.tag">Servicios exclusivos para empresas e instituciones</span></span>
+    <span style="display:inline-flex;align-items:center">
+      <span><span data-i18n="b2bbar.corp">Corporativo:</span> <strong><a href="tel:+525597222235">55 9722 2235</a></strong> · <a href="mailto:ventas@stesso.com.mx">ventas@stesso.com.mx</a></span>
+      <span class="lang-switch" role="group" aria-label="Language">
+        <button type="button" data-lang="es" class="active">ES</button>
+        <button type="button" data-lang="en">EN</button>
+      </span>
+    </span>
+  </div>
+</div>
+
+<!-- ==== HEADER ==== -->
+<header class="site">
+  <div class="container nav">
+    <a href="#" class="brand" aria-label="Stesso · Limpieza profesional B2B">
+      <img src="logo-stesso-h.svg" alt="Stesso" class="brand-logo">
+      <span class="brand-tag">B2B</span>
+    </a>
+    <nav class="primary">
+      <a href="#servicios" data-i18n="nav.services">Servicios</a>
+      <a href="#sectores" data-i18n="nav.sectors">Sectores</a>
+      <a href="#tecnologia" data-i18n="nav.tech">Tecnología</a>
+      <a href="#credenciales" data-i18n="nav.certs">Certificaciones</a>
+      <a href="#clientes" data-i18n="nav.clients">Clientes</a>
+      <a href="#blog" data-i18n="nav.blog">Blog</a>
+      <a href="#cotizar" class="cta-quote" data-i18n="nav.cta">Cotiza para tu empresa</a>
+    </nav>
+    <button class="menu-toggle" aria-label="Menú">☰</button>
+  </div>
+</header>
+
+<!-- ==== HERO ==== -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+
+  <div class="container hero-grid">
+    <div class="fade-up">
+      <span class="eyebrow"><span class="dot"></span> <span data-i18n="hero.eyebrow">Top 3 · México y Latinoamérica</span></span>
+      <h1><span data-i18n="hero.h1a">Limpieza especializada para</span> <span class="accent" data-i18n="hero.h1b">empresas que no pueden parar.</span></h1>
+      <p class="lead" data-i18n-html="hero.lead">Personal fijo capacitado, sanitización certificada COFEPRIS y tecnología aplicada — <strong>drones y robots autónomos</strong> — para plantas industriales, corporativos, laboratorios y centros logísticos.</p>
+      <div class="hero-actions">
+        <a href="#cotizar" class="btn btn-primary"><span data-i18n="hero.cta1">Solicitar cotización corporativa</span>
+          <svg class="ic-svg" viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#servicios" class="btn btn-ghost" data-i18n="hero.cta2">Ver servicios</a>
+      </div>
+      <div class="hero-stats">
+        <div><strong>25+</strong><span data-i18n="hero.stat1">Años de experiencia B2B</span></div>
+        <div><strong>+300</strong><span data-i18n="hero.stat2">Empresas clientes</span></div>
+        <div><strong>100%</strong><span>REPSE · ISO 9001</span></div>
+      </div>
+    </div>
+
+    <aside class="hero-card fade-up" id="cotizar">
+      <span class="live-tag" data-i18n="form.live">Respuesta &lt; 24h</span>
+      <span class="badge-small" data-i18n="form.badge">⚡ Asesor corporativo</span>
+      <h3 data-i18n="form.title">Cotización para empresas</h3>
+      <p data-i18n="form.sub">Diagnóstico técnico y propuesta a medida para tu industria.</p>
+      <form class="form-grid" onsubmit="event.preventDefault(); this.querySelector('button[type=submit]').textContent='✓'; this.querySelector('button[type=submit]').style.background='var(--teal)';">
+        <label><span data-i18n="form.l1">Empresa</span>
+          <input type="text" data-i18n-attr="placeholder|form.p1" placeholder="Razón social" required>
+        </label>
+        <label><span data-i18n="form.l2">Contacto</span>
+          <input type="text" data-i18n-attr="placeholder|form.p2" placeholder="Tu nombre" required>
+        </label>
+        <label><span data-i18n="form.l3">Correo corporativo</span>
+          <input type="email" data-i18n-attr="placeholder|form.p3" placeholder="nombre@empresa.com" required>
+        </label>
+        <label><span data-i18n="form.l4">Teléfono</span>
+          <input type="tel" data-i18n-attr="placeholder|form.p4" placeholder="55 0000 0000" required>
+        </label>
+        <label class="full"><span data-i18n="form.l5">Sector / Industria</span>
+          <select required>
+            <option value="" data-i18n="form.s0">Selecciona un sector</option>
+            <option data-i18n="form.s1">Industrial / Manufactura</option>
+            <option data-i18n="form.s2">Alimentos y bebidas</option>
+            <option data-i18n="form.s3">Farmacéutico / Salud</option>
+            <option data-i18n="form.s4">Corporativo / Oficinas</option>
+            <option data-i18n="form.s5">Logística / Centros de distribución</option>
+            <option data-i18n="form.s6">Retail / Comercial</option>
+            <option data-i18n="form.s7">Hotelería</option>
+            <option data-i18n="form.s8">Financiero / Centros de datos</option>
+          </select>
+        </label>
+        <label class="full"><span data-i18n="form.l6">Servicio de interés</span>
+          <select required>
+            <option value="" data-i18n="form.v0">Selecciona un servicio</option>
+            <option data-i18n="form.v1">Limpieza profesional con personal fijo</option>
+            <option data-i18n="form.v2">Sanitización y desinfección</option>
+            <option data-i18n="form.v3">Limpieza con drones (fachadas / alturas)</option>
+            <option data-i18n="form.v4">Robot de limpieza autónomo</option>
+            <option data-i18n="form.v5">Limpieza profunda / Servicios especiales</option>
+          </select>
+        </label>
+        <button class="btn btn-primary full" type="submit" data-i18n="form.submit">Enviar a un asesor →</button>
+      </form>
+      <p class="note" data-i18n="form.note">🔒 Información tratada únicamente con fines comerciales B2B.</p>
+    </aside>
+  </div>
+
+  <!-- Logos marquee at bottom of hero -->
+  <div class="hero-logos">
+    <div class="hero-logos-track">
+      <img src="https://www.stesso.com.mx/uploads/femsa.png" alt="FEMSA">
+      <img src="https://www.stesso.com.mx/uploads/adidas-9.svg" alt="Adidas">
+      <img src="https://www.stesso.com.mx/uploads/Puma.png" alt="Puma">
+      <img src="https://www.stesso.com.mx/uploads/Philips_2024-11-08-195935_rmzu.png" alt="Philips">
+      <img src="https://www.stesso.com.mx/uploads/backrock.png" alt="BlackRock">
+      <img src="https://www.stesso.com.mx/uploads/Intercam-Banco.png" alt="Intercam">
+      <img src="https://www.stesso.com.mx/uploads/Grisi.jpg" alt="Grisi">
+      <img src="https://www.stesso.com.mx/uploads/Verde-valle.svg" alt="Verde Valle">
+      <img src="https://www.stesso.com.mx/uploads/splenda-logo.webp" alt="Splenda">
+      <img src="https://www.stesso.com.mx/uploads/santa-clara.svg" alt="Santa Clara">
+      <img src="https://www.stesso.com.mx/uploads/Prysmian_2024-11-08-195952_vpus.png" alt="Prysmian">
+      <img src="https://www.stesso.com.mx/uploads/pilgrims-mx.svg" alt="Pilgrim's">
+      <!-- duplicate for seamless loop -->
+      <img src="https://www.stesso.com.mx/uploads/femsa.png" alt="">
+      <img src="https://www.stesso.com.mx/uploads/adidas-9.svg" alt="">
+      <img src="https://www.stesso.com.mx/uploads/Puma.png" alt="">
+      <img src="https://www.stesso.com.mx/uploads/Philips_2024-11-08-195935_rmzu.png" alt="">
+      <img src="https://www.stesso.com.mx/uploads/backrock.png" alt="">
+      <img src="https://www.stesso.com.mx/uploads/Intercam-Banco.png" alt="">
+      <img src="https://www.stesso.com.mx/uploads/Grisi.jpg" alt="">
+      <img src="https://www.stesso.com.mx/uploads/Verde-valle.svg" alt="">
+      <img src="https://www.stesso.com.mx/uploads/splenda-logo.webp" alt="">
+      <img src="https://www.stesso.com.mx/uploads/santa-clara.svg" alt="">
+      <img src="https://www.stesso.com.mx/uploads/Prysmian_2024-11-08-195952_vpus.png" alt="">
+      <img src="https://www.stesso.com.mx/uploads/pilgrims-mx.svg" alt="">
+    </div>
+  </div>
+</section>
+
+<!-- ==== CERTS STRIP ==== -->
+<section class="trust">
+  <div class="container">
+    <div class="lbl" data-i18n="trust.lbl">Cumplimiento certificado · Verificable</div>
+    <div class="cert-list">
+      <div class="cert">
+        <img src="https://www.stesso.com.mx/uploads/ISO-9001.png" alt="ISO 9001" class="seal-img">
+        <div>
+          <div class="cert-title">ISO 9001:2015</div>
+          <div class="cert-sub" data-i18n="trust.iso">Sistema de gestión</div>
+        </div>
+      </div>
+      <div class="cert">
+        <img src="https://www.stesso.com.mx/uploads/E_REPSE_HOME.png" alt="REPSE" class="seal-img">
+        <div>
+          <div class="cert-title" data-i18n="trust.repseT">REPSE Vigente</div>
+          <div class="cert-sub" data-i18n="trust.repseS">Reforma laboral</div>
+        </div>
+      </div>
+      <div class="cert">
+        <img src="https://www.stesso.com.mx/uploads/LogoESR-2026-01.png" alt="ESR" class="seal-img">
+        <div>
+          <div class="cert-title" data-i18n="trust.esrT">Empresa Socialmente Responsable</div>
+          <div class="cert-sub" data-i18n="trust.esrS">Distintivo CEMEFI</div>
+        </div>
+      </div>
+      <div class="cert">
+        <img src="https://www.stesso.com.mx/uploads/COFEPRIS-logo-01.png" alt="COFEPRIS" class="seal-img">
+        <div>
+          <div class="cert-title">COFEPRIS</div>
+          <div class="cert-sub" data-i18n="trust.cofS">Productos avalados</div>
+        </div>
+      </div>
+      <div class="cert">
+        <div style="height:62px;display:grid;place-items:center;font-weight:900;color:var(--navy);font-size:18px;background:var(--blue-soft);border-radius:10px;padding:8px 16px;letter-spacing:-.5px">NOM-035</div>
+        <div>
+          <div class="cert-title" data-i18n="trust.nomT">Factores psicosociales</div>
+          <div class="cert-sub" data-i18n="trust.nomS">Cumplimiento STPS</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==== SERVICIOS ==== -->
+<section class="block services" id="servicios">
+  <div class="container">
+    <div class="section-head fade-up">
+      <span class="eyebrow"><span class="dot"></span> <span data-i18n="svc.eyebrow">Servicios B2B</span></span>
+      <h2><span data-i18n="svc.h2a">Limpieza profesional</span> <span class="accent" data-i18n="svc.h2b">+ tecnología aplicada</span></h2>
+      <p data-i18n="svc.intro">Personal fijo capacitado para operación continua, complementado con servicios especializados que solo unas pocas empresas en México ofrecen.</p>
+    </div>
+
+    <div class="svc-grid">
+
+      <!-- Featured: Personal fijo -->
+      <article class="svc fixed featured fade-up">
+        <div class="media-top" style="background-image:url('https://www.stesso.com.mx/uploads/Pagina01-04.webp')"></div>
+        <div class="icon-float">
+          <svg class="ic-svg ic-lg" viewBox="0 0 24 24"><path d="M3 21h18M5 21V10l7-6 7 6v11M9 21v-6h6v6"/></svg>
+        </div>
+        <div class="body-top" style="padding-top:42px">
+          <h3 data-i18n="svc.c1.t">Limpieza Profesional · Personal Fijo</h3>
+          <p data-i18n="svc.c1.p">Equipos dedicados, capacitados y supervisados, con asignación permanente en tu planta, corporativo o instalación.</p>
+          <ul>
+            <li data-i18n="svc.c1.l1">Personal capacitado en nuestro Centro de Entrenamiento</li>
+            <li data-i18n="svc.c1.l2">Supervisión y reportes mensuales medibles</li>
+            <li data-i18n="svc.c1.l3">Cumplimiento REPSE — sin riesgos laborales para tu empresa</li>
+            <li data-i18n="svc.c1.l4">Cobertura nacional 24/7</li>
+          </ul>
+          <span class="more"><span data-i18n="svc.more1">Conocer el servicio</span>
+            <svg class="ic-svg" viewBox="0 0 24 24" style="width:14px;height:14px"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </article>
+
+      <!-- Featured: Sanitización -->
+      <article class="svc health featured fade-up">
+        <div class="media-top" style="background-image:url('https://www.stesso.com.mx/uploads/_imgform/Sanitización.webp'), url('https://www.stesso.com.mx/uploads/Pagina01-09limpieza.webp')"></div>
+        <div class="icon-float">
+          <svg class="ic-svg ic-lg" viewBox="0 0 24 24"><path d="M12 2l3 6h-6l3-6zM7 22a5 5 0 0 1-5-5c0-3 5-9 5-9s5 6 5 9a5 5 0 0 1-5 5zM17 22a5 5 0 0 1-5-5c0-3 5-9 5-9s5 6 5 9a5 5 0 0 1-5 5z"/></svg>
+        </div>
+        <div class="body-top" style="padding-top:42px">
+          <h3 data-i18n="svc.c2.t">Sanitización y Desinfección Certificada</h3>
+          <p data-i18n="svc.c2.p">Eliminación de virus, bacterias y patógenos con productos COFEPRIS. Para laboratorios, plantas de alimentos, hospitales y áreas críticas.</p>
+          <ul>
+            <li data-i18n="svc.c2.l1">Nebulización ULV y termonebulización</li>
+            <li data-i18n="svc.c2.l2">Productos grado hospitalario · certificado por servicio</li>
+            <li data-i18n="svc.c2.l3">Protocolos para industria alimentaria y farmacéutica</li>
+          </ul>
+          <span class="more"><span data-i18n="svc.more2">Ver protocolos</span>
+            <svg class="ic-svg" viewBox="0 0 24 24" style="width:14px;height:14px"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </article>
+
+      <!-- Small services -->
+      <article class="svc special small fade-up">
+        <div class="media-top" style="background-image:url('https://www.stesso.com.mx/uploads/Pagina01-06.webp');height:160px"></div>
+        <div class="icon-float">
+          <svg class="ic-svg ic-lg" viewBox="0 0 24 24"><path d="M19 14c1.5-3-1-7-4-7-2 0-3 1-4 3-1-2-2-3-4-3-3 0-5.5 4-4 7l8 8 8-8z"/></svg>
+        </div>
+        <div class="body-top" style="padding-top:38px">
+          <h3 data-i18n="svc.c3.t">Limpieza Profunda y Fina</h3>
+          <p data-i18n="svc.c3.p">Recuperación de espacios, lavado de alfombras, abrillantado y pulido de pisos, limpieza post-obra.</p>
+          <span class="more" data-i18n="svc.detail">Ver detalles →</span>
+        </div>
+      </article>
+
+      <article class="svc heights small fade-up">
+        <div class="media-top" style="background-image:url('https://www.stesso.com.mx/uploads/IMG_5001.webp');height:160px"></div>
+        <div class="icon-float">
+          <svg class="ic-svg ic-lg" viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 6-6M14 9h6v6"/></svg>
+        </div>
+        <div class="body-top" style="padding-top:38px">
+          <h3 data-i18n="svc.c4.t">Limpieza Técnica en Alturas</h3>
+          <p data-i18n="svc.c4.p">Personal certificado para trabajos en cuerda, andamios y alturas — fachadas, ventanales y estructuras.</p>
+          <span class="more" data-i18n="svc.detail">Ver detalles →</span>
+        </div>
+      </article>
+
+      <article class="svc alt small fade-up">
+        <div class="media-top" style="background-image:url('https://www.stesso.com.mx/uploads/Pagina01-08limpieza.webp');height:160px"></div>
+        <div class="icon-float">
+          <svg class="ic-svg ic-lg" viewBox="0 0 24 24"><path d="M4 17l6-6 4 4 6-6M14 9h6v6"/></svg>
+        </div>
+        <div class="body-top" style="padding-top:38px">
+          <h3 data-i18n="svc.c5.t">Cuidado y Tratamiento de Pisos</h3>
+          <p data-i18n="svc.c5.p">Mármol, granito, vinil, concreto pulido. Cristalizado, encerado y mantenimiento programado.</p>
+          <span class="more" data-i18n="svc.detail">Ver detalles →</span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ==== TECH SHOWCASE (Drones + Robots) ==== -->
+<section class="block tech-show" id="tecnologia">
+  <div class="container">
+    <div class="section-head fade-up">
+      <span class="eyebrow"><span class="dot"></span> <span data-i18n="tech.eyebrow">Tecnología aplicada</span></span>
+      <h2><span data-i18n="tech.h2a">Únicos en México con flota propia de</span> <span class="accent" data-i18n="tech.h2b">drones y robots autónomos</span></h2>
+      <p data-i18n="tech.intro">Reducimos riesgo operativo, eliminamos andamios y bajamos los tiempos de servicio hasta un 60%. Solo unas pocas empresas en el país ofrecen esto.</p>
+    </div>
+
+    <div class="tech-grid">
+      <article class="tech-card fade-up">
+        <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1473968512647-3e447244af8f?w=1200&auto=format&fit=crop&q=80')"></div>
+        <div class="content">
+          <span class="tag" data-i18n="tech.tag1">✈ Drones de altura</span>
+          <h3 data-i18n="tech.t1">Limpieza Vertical con Drones</h3>
+          <p data-i18n="tech.p1">Fachadas, paneles solares, naves industriales y estructuras de gran altura. Sin andamios, sin cierre de áreas, sin riesgos.</p>
+          <div class="specs">
+            <div class="spec"><strong>60%</strong><span data-i18n="tech.s1a">Menos tiempo vs. método tradicional</span></div>
+            <div class="spec"><strong>120m</strong><span data-i18n="tech.s1b">Altura máxima de operación</span></div>
+            <div class="spec"><strong>0</strong><span data-i18n="tech.s1c">Andamios necesarios</span></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="tech-card fade-up">
+        <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1581094288338-2314dddb7ece?w=1200&auto=format&fit=crop&q=80')"></div>
+        <div class="content">
+          <span class="tag" data-i18n="tech.tag2">🤖 Robots autónomos</span>
+          <h3 data-i18n="tech.t2">Robots de Limpieza de Piso</h3>
+          <p data-i18n="tech.p2">Para hoteles, centros comerciales, aeropuertos y grandes superficies corporativas. Operación 24/7 con telemetría disponible.</p>
+          <div class="specs">
+            <div class="spec"><strong>3,000 m²</strong><span data-i18n="tech.s2a">Cobertura por ciclo</span></div>
+            <div class="spec"><strong>24/7</strong><span data-i18n="tech.s2b">Operación continua</span></div>
+            <div class="spec"><strong>API</strong><span data-i18n="tech.s2c">Reportes en tiempo real</span></div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==== SECTORES ==== -->
+<section class="block sectors" id="sectores">
+  <div class="container">
+    <div class="section-head fade-up">
+      <span class="eyebrow"><span class="dot"></span> <span data-i18n="sec.eyebrow">Sectores que atendemos</span></span>
+      <h2 data-i18n="sec.h2">Especialistas por industria</h2>
+      <p data-i18n="sec.intro">Cada sector tiene normas, riesgos y estándares diferentes. Nuestros equipos están entrenados específicamente para cada uno.</p>
+    </div>
+
+    <div class="sec-grid">
+      <div class="sector fade-up">
+        <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1565514020179-026b92b84bb6?w=900&auto=format&fit=crop&q=80')"></div>
+        <div class="ic">🏭</div>
+        <div class="content">
+          <h4 data-i18n="sec.1t">Industrial / Manufactura</h4>
+          <p data-i18n="sec.1p">Plantas productivas, naves de gran altura, áreas operativas.</p>
+          <div class="tags"><span class="tag" data-i18n="sec.1a">Líneas de producción</span><span class="tag" data-i18n="sec.1b">Naves</span></div>
+        </div>
+      </div>
+
+      <div class="sector fade-up">
+        <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=900&auto=format&fit=crop&q=80')"></div>
+        <div class="ic">🍞</div>
+        <div class="content">
+          <h4 data-i18n="sec.2t">Alimentos y Bebidas</h4>
+          <p data-i18n="sec.2p">Plantas de procesamiento bajo BPM y HACCP.</p>
+          <div class="tags"><span class="tag" data-i18n="sec.2a">Grado alimentario</span><span class="tag" data-i18n="sec.2b">Envasado</span></div>
+        </div>
+      </div>
+
+      <div class="sector fade-up">
+        <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=900&auto=format&fit=crop&q=80')"></div>
+        <div class="ic">💊</div>
+        <div class="content">
+          <h4 data-i18n="sec.3t">Farmacéutico y Salud</h4>
+          <p data-i18n="sec.3p">Laboratorios, áreas controladas y hospitales privados.</p>
+          <div class="tags"><span class="tag" data-i18n="sec.3a">Salas limpias</span><span class="tag">COFEPRIS</span></div>
+        </div>
+      </div>
+
+      <div class="sector fade-up">
+        <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=900&auto=format&fit=crop&q=80')"></div>
+        <div class="ic">🏢</div>
+        <div class="content">
+          <h4 data-i18n="sec.4t">Corporativo y Oficinas</h4>
+          <p data-i18n="sec.4p">Edificios corporativos, oficinas premium y coworkings.</p>
+          <div class="tags"><span class="tag" data-i18n="sec.4a">Imagen ejecutiva</span><span class="tag" data-i18n="sec.4b">Lobbies</span></div>
+        </div>
+      </div>
+
+      <div class="sector fade-up">
+        <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1553413077-190dd305871c?w=900&auto=format&fit=crop&q=80')"></div>
+        <div class="ic">🚚</div>
+        <div class="content">
+          <h4 data-i18n="sec.5t">Logística y CEDIS</h4>
+          <p data-i18n="sec.5p">Centros de distribución, almacenes y flotillas.</p>
+          <div class="tags"><span class="tag" data-i18n="sec.5a">Robots autónomos</span><span class="tag">24/7</span></div>
+        </div>
+      </div>
+
+      <div class="sector fade-up">
+        <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=900&auto=format&fit=crop&q=80')"></div>
+        <div class="ic">🛒</div>
+        <div class="content">
+          <h4 data-i18n="sec.6t">Retail y Comercial</h4>
+          <p data-i18n="sec.6p">Tiendas departamentales, cadenas y centros comerciales.</p>
+          <div class="tags"><span class="tag" data-i18n="sec.6a">Limpieza nocturna</span><span class="tag" data-i18n="sec.6b">Fachadas</span></div>
+        </div>
+      </div>
+
+      <div class="sector fade-up">
+        <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1566073771259-6a8506099945?w=900&auto=format&fit=crop&q=80')"></div>
+        <div class="ic">🏨</div>
+        <div class="content">
+          <h4 data-i18n="sec.7t">Hotelería y Hospitality</h4>
+          <p data-i18n="sec.7p">Hoteles, restaurantes y cines.</p>
+          <div class="tags"><span class="tag" data-i18n="sec.7a">Robot autónomo</span><span class="tag" data-i18n="sec.7b">Áreas premium</span></div>
+        </div>
+      </div>
+
+      <div class="sector fade-up">
+        <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=900&auto=format&fit=crop&q=80')"></div>
+        <div class="ic">🏦</div>
+        <div class="content">
+          <h4 data-i18n="sec.8t">Financiero y Data Centers</h4>
+          <p data-i18n="sec.8p">Bancos, aseguradoras y centros de datos.</p>
+          <div class="tags"><span class="tag" data-i18n="sec.8a">Áreas restringidas</span><span class="tag" data-i18n="sec.8b">Confidencial</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==== CREDS ==== -->
+<section class="block creds" id="credenciales">
+  <div class="container creds-grid">
+    <div class="creds-text fade-up">
+      <span class="eyebrow" style="background:var(--blue-soft);color:var(--blue);border:1px solid #d9e5ff"><span class="dot" style="background:var(--blue)"></span> <span data-i18n="cred.eyebrow">Cumplimiento y respaldo</span></span>
+      <h2><span data-i18n="cred.h2a">Cumplimos para que tu empresa</span> <span class="accent" data-i18n="cred.h2b">no asuma riesgos.</span></h2>
+      <p data-i18n="cred.intro">Trabajar con Stesso significa subcontratar limpieza sin contingencias laborales, sanitarias o fiscales. Todas nuestras certificaciones son verificables y vigentes.</p>
+
+      <div class="cred-row">
+        <div class="logo-cert"><img src="https://www.stesso.com.mx/uploads/ISO-9001.png" alt="ISO 9001"></div>
+        <div>
+          <h4 data-i18n="cred.r1t">ISO 9001:2015 — Sistema de Gestión de Calidad</h4>
+          <p data-i18n="cred.r1p">Procesos documentados y auditados externamente. Trazabilidad de cada servicio.</p>
+        </div>
+      </div>
+      <div class="cred-row">
+        <div class="logo-cert"><img src="https://www.stesso.com.mx/uploads/E_REPSE_HOME.png" alt="REPSE"></div>
+        <div>
+          <h4 data-i18n="cred.r2t">REPSE — Registro vigente ante STPS</h4>
+          <p data-i18n="cred.r2p">Cumplimos al 100% la reforma de subcontratación. Tu empresa contrata sin riesgo de responsabilidad solidaria.</p>
+        </div>
+      </div>
+      <div class="cred-row">
+        <div class="logo-cert"><img src="https://www.stesso.com.mx/uploads/LogoESR-2026-01.png" alt="ESR"></div>
+        <div>
+          <h4 data-i18n="cred.r3t">Empresa Socialmente Responsable (CEMEFI)</h4>
+          <p data-i18n="cred.r3p">Distintivo ESR vigente — calidad de vida, ética e impacto en la cadena de valor.</p>
+        </div>
+      </div>
+      <div class="cred-row">
+        <div class="logo-cert"><img src="https://www.stesso.com.mx/uploads/COFEPRIS-logo-01.png" alt="COFEPRIS"></div>
+        <div>
+          <h4 data-i18n="cred.r4t">COFEPRIS · NOM-035</h4>
+          <p data-i18n="cred.r4p">Productos sanitizantes con registro sanitario; cumplimiento de factores psicosociales del personal.</p>
+        </div>
+      </div>
+
+      <a href="#cotizar" class="btn btn-dark" style="margin-top:14px"><span data-i18n="cred.cta">Verificar para mi empresa</span>
+        <svg class="ic-svg" viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+
+    <aside class="creds-visual fade-up">
+      <div class="image-top"></div>
+      <div class="body-area">
+        <h3 data-i18n="cred.kpi.h">Por qué grandes corporativos eligen Stesso</h3>
+        <p class="sub" data-i18n="cred.kpi.s">Operación medible, riesgo cero y respaldo certificado.</p>
+        <div class="kpi-grid">
+          <div class="kpi"><strong>25+</strong><span data-i18n="cred.kpi.1">Años en B2B mexicano</span></div>
+          <div class="kpi"><strong>+300</strong><span data-i18n="cred.kpi.2">Empresas clientes activas</span></div>
+          <div class="kpi"><strong>24/7</strong><span data-i18n="cred.kpi.3">Personal fijo</span></div>
+          <div class="kpi"><strong>0</strong><span data-i18n="cred.kpi.4">Contingencias REPSE</span></div>
+        </div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- ==== TESTIMONIAL ==== -->
+<section class="block testimonial">
+  <div class="container">
+    <div class="testimonial-card fade-up">
+      <div class="testimonial-img"></div>
+      <div class="testimonial-body">
+        <div class="quote-mark">"</div>
+        <blockquote data-i18n="test.quote">
+          Trabajamos con Stesso desde hace varios años. Son personas que están muy interesadas en el bienestar de la gente; no solamente como una operación, sino como personas.
+        </blockquote>
+        <div class="testimonial-author">
+          <div class="avatar">BP</div>
+          <div>
+            <strong>Berry Plastics México</strong>
+            <span data-i18n="test.role">Cliente corporativo · Industria de empaque</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==== CLIENTS (real logos) ==== -->
+<section class="block clients" id="clientes">
+  <div class="container">
+    <div class="section-head fade-up">
+      <span class="eyebrow"><span class="dot"></span> <span data-i18n="cli.eyebrow">Confianza B2B</span></span>
+      <h2><span data-i18n="cli.h2a">Empresas que confían en</span> <span class="accent">Stesso</span></h2>
+      <p data-i18n="cli.intro">Marcas líderes de industria, retail, alimentos, farma y banca eligen a Stesso como su socio de limpieza.</p>
+    </div>
+    <div class="client-grid">
+      <div class="client-card"><img src="https://www.stesso.com.mx/uploads/femsa.png" alt="FEMSA"></div>
+      <div class="client-card"><img src="https://www.stesso.com.mx/uploads/adidas-9.svg" alt="Adidas"></div>
+      <div class="client-card"><img src="https://www.stesso.com.mx/uploads/Puma.png" alt="Puma"></div>
+      <div class="client-card"><img src="https://www.stesso.com.mx/uploads/Philips_2024-11-08-195935_rmzu.png" alt="Philips"></div>
+      <div class="client-card"><img src="https://www.stesso.com.mx/uploads/backrock.png" alt="BlackRock"></div>
+      <div class="client-card"><img src="https://www.stesso.com.mx/uploads/Intercam-Banco.png" alt="Intercam"></div>
+      <div class="client-card"><img src="https://www.stesso.com.mx/uploads/Grisi.jpg" alt="Grisi"></div>
+      <div class="client-card"><img src="https://www.stesso.com.mx/uploads/Verde-valle.svg" alt="Verde Valle"></div>
+      <div class="client-card"><img src="https://www.stesso.com.mx/uploads/splenda-logo.webp" alt="Splenda"></div>
+      <div class="client-card"><img src="https://www.stesso.com.mx/uploads/santa-clara.svg" alt="Santa Clara"></div>
+      <div class="client-card"><img src="https://www.stesso.com.mx/uploads/del-valle.svg" alt="Del Valle"></div>
+      <div class="client-card"><img src="https://www.stesso.com.mx/uploads/Prysmian_2024-11-08-195952_vpus.png" alt="Prysmian"></div>
+      <div class="client-card"><img src="https://www.stesso.com.mx/uploads/pilgrims-mx.svg" alt="Pilgrim's"></div>
+      <div class="client-card"><img src="https://www.stesso.com.mx/uploads/logo-San-Pablo-Farmacia.png" alt="San Pablo"></div>
+      <div class="client-card"><img src="https://www.stesso.com.mx/uploads/Chopo.jpg" alt="Chopo"></div>
+      <div class="client-card"><img src="https://www.stesso.com.mx/uploads/Anixter.jpg" alt="Anixter"></div>
+      <div class="client-card"><img src="https://www.stesso.com.mx/uploads/luuna-logo.png" alt="Luuna"></div>
+      <div class="client-card"><img src="https://www.stesso.com.mx/uploads/Cinema-Maquina_2024-11-08-195104_cjyx.png" alt="Cinema Máquina"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==== WHY US ==== -->
+<section class="block why">
+  <div class="container">
+    <div class="section-head fade-up">
+      <span class="eyebrow"><span class="dot"></span> <span data-i18n="why.eyebrow">Cómo trabajamos</span></span>
+      <h2><span data-i18n="why.h2a">Un proceso B2B</span> <span class="accent" data-i18n="why.h2b">claro, sin sobresaltos</span></h2>
+      <p data-i18n="why.intro">Diseñado para empresas que necesitan continuidad operativa y cero fricción administrativa.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card fade-up">
+        <div class="corner"></div>
+        <div class="num">01</div>
+        <h4 data-i18n="why.1t">Diagnóstico técnico</h4>
+        <p data-i18n="why.1p">Visita en sitio, levantamiento de áreas, frecuencias y normativa aplicable a tu industria.</p>
+      </div>
+      <div class="why-card fade-up">
+        <div class="corner"></div>
+        <div class="num">02</div>
+        <h4 data-i18n="why.2t">Propuesta a la medida</h4>
+        <p data-i18n="why.2p">Personal, equipo, productos, KPIs y SLA. Sin sorpresas: presupuesto cerrado y trazable.</p>
+      </div>
+      <div class="why-card fade-up">
+        <div class="corner"></div>
+        <div class="num">03</div>
+        <h4 data-i18n="why.3t">Operación medible</h4>
+        <p data-i18n="why.3p">Supervisión, reportes mensuales y mejora continua. Plataforma de seguimiento para tu equipo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==== BLOG / CONTENT ==== -->
+<section class="block blog" id="blog">
+  <div class="container">
+    <div class="blog-head fade-up">
+      <div class="section-head" style="text-align:left;margin:0">
+        <span class="eyebrow"><span class="dot"></span> <span data-i18n="blog.eyebrow">Insights B2B</span></span>
+        <h2 style="margin-bottom:10px"><span data-i18n="blog.h2a">Recursos para</span> <span class="accent" data-i18n="blog.h2b">tomadores de decisión</span></h2>
+        <p style="margin:0" data-i18n="blog.intro">Casos, normativa y comparativos de tecnología para responsables de operaciones, facilities y compras.</p>
+      </div>
+      <a href="#" class="blog-all">
+        <span data-i18n="blog.all">Ver todo el blog</span>
+        <svg class="ic-svg" viewBox="0 0 24 24" style="width:14px;height:14px"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+
+    <div class="blog-grid">
+      <!-- Feature article -->
+      <a href="#" class="blog-card feature fade-up">
+        <div class="img-wrap">
+          <span class="cat-tag tech" data-i18n="blog.cat.tech">Tecnología</span>
+          <img src="https://images.unsplash.com/photo-1473968512647-3e447244af8f?w=1200&auto=format&fit=crop&q=80" alt="Drone limpieza" loading="lazy">
+        </div>
+        <div class="body">
+          <div class="meta">
+            <span data-i18n="blog.b1.date">12 May 2026</span>
+            <span class="dot-sep"></span>
+            <span><span data-i18n="blog.b1.read">8 min</span> · <span data-i18n="blog.readtime">lectura</span></span>
+          </div>
+          <h3 data-i18n="blog.b1.t">Cómo reducimos 60% el tiempo de limpieza de fachadas con drones — caso real en torre corporativa CDMX</h3>
+          <p data-i18n="blog.b1.p">Una torre de 22 pisos en Reforma operaba con andamios cada 4 meses y cierre parcial del lobby. Cambiar a drones cambió la ecuación de costo, riesgo y tiempo. Te contamos los números.</p>
+          <span class="read-more">
+            <span data-i18n="blog.read">Leer artículo</span>
+            <svg class="ic-svg" viewBox="0 0 24 24" style="width:14px;height:14px"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </a>
+
+      <!-- Small 1 -->
+      <a href="#" class="blog-card small fade-up">
+        <div class="img-wrap">
+          <span class="cat-tag regs" data-i18n="blog.cat.regs">Cumplimiento</span>
+          <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=900&auto=format&fit=crop&q=80" alt="REPSE" loading="lazy">
+        </div>
+        <div class="body">
+          <div class="meta">
+            <span data-i18n="blog.b2.date">28 Abr 2026</span>
+            <span class="dot-sep"></span>
+            <span><span data-i18n="blog.b2.read">6 min</span></span>
+          </div>
+          <h3 data-i18n="blog.b2.t">REPSE en servicios de limpieza: 5 puntos que tu área legal debe revisar antes de contratar</h3>
+          <span class="read-more">
+            <span data-i18n="blog.read">Leer artículo</span>
+            <svg class="ic-svg" viewBox="0 0 24 24" style="width:14px;height:14px"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </a>
+
+      <!-- Small 2 -->
+      <a href="#" class="blog-card small fade-up">
+        <div class="img-wrap">
+          <span class="cat-tag case" data-i18n="blog.cat.case">Caso de estudio</span>
+          <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=900&auto=format&fit=crop&q=80" alt="Hotel robot" loading="lazy">
+        </div>
+        <div class="body">
+          <div class="meta">
+            <span data-i18n="blog.b3.date">15 Abr 2026</span>
+            <span class="dot-sep"></span>
+            <span><span data-i18n="blog.b3.read">5 min</span></span>
+          </div>
+          <h3 data-i18n="blog.b3.t">Robots autónomos en hotelería: ROI real en un hotel boutique de 180 habitaciones</h3>
+          <span class="read-more">
+            <span data-i18n="blog.read">Leer artículo</span>
+            <svg class="ic-svg" viewBox="0 0 24 24" style="width:14px;height:14px"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </a>
+
+      <!-- Small 3 -->
+      <a href="#" class="blog-card small fade-up">
+        <div class="img-wrap">
+          <span class="cat-tag industry" data-i18n="blog.cat.ind">Industria</span>
+          <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=900&auto=format&fit=crop&q=80" alt="Planta alimentos" loading="lazy">
+        </div>
+        <div class="body">
+          <div class="meta">
+            <span data-i18n="blog.b4.date">02 Abr 2026</span>
+            <span class="dot-sep"></span>
+            <span><span data-i18n="blog.b4.read">7 min</span></span>
+          </div>
+          <h3 data-i18n="blog.b4.t">BPM y HACCP: cómo certificar tu programa de limpieza en planta de alimentos</h3>
+          <span class="read-more">
+            <span data-i18n="blog.read">Leer artículo</span>
+            <svg class="ic-svg" viewBox="0 0 24 24" style="width:14px;height:14px"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </a>
+
+      <!-- Small 4 -->
+      <a href="#" class="blog-card small fade-up">
+        <div class="img-wrap">
+          <span class="cat-tag tech" data-i18n="blog.cat.tech">Tecnología</span>
+          <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=900&auto=format&fit=crop&q=80" alt="Sanitización hospitalaria" loading="lazy">
+        </div>
+        <div class="body">
+          <div class="meta">
+            <span data-i18n="blog.b5.date">22 Mar 2026</span>
+            <span class="dot-sep"></span>
+            <span><span data-i18n="blog.b5.read">4 min</span></span>
+          </div>
+          <h3 data-i18n="blog.b5.t">Sanitización con productos COFEPRIS: por qué no todos los desinfectantes son legales en México</h3>
+          <span class="read-more">
+            <span data-i18n="blog.read">Leer artículo</span>
+            <svg class="ic-svg" viewBox="0 0 24 24" style="width:14px;height:14px"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ==== CTA BAND ==== -->
+<div class="cta-wrap">
+  <div class="cta-band fade-up">
+    <div>
+      <h2 data-i18n="cta.h2">¿Listo para liberar a tu equipo de la operación de limpieza?</h2>
+      <p data-i18n="cta.p">Habla con un asesor B2B y recibe una propuesta a medida para tu empresa en 24 horas hábiles.</p>
+    </div>
+    <div class="actions">
+      <a href="#cotizar" class="btn btn-primary"><span data-i18n="cta.b1">Cotizar para mi empresa</span>
+        <svg class="ic-svg" viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+      <a href="tel:+525597222235" class="btn btn-ghost">📞 55 9722 2235</a>
+    </div>
+  </div>
+</div>
+
+<!-- ==== FOOTER ==== -->
+<footer>
+  <div class="container foot-grid">
+    <div class="foot-brand">
+      <a href="#" class="brand">
+        <img src="logo-stesso-h.svg" alt="Stesso" class="brand-logo">
+        <span class="brand-tag">B2B</span>
+      </a>
+      <p data-i18n="foot.about">Servicios de limpieza, sanitización y tecnología aplicada para empresas, industria y corporativos en México. Cumplimiento certificado verificable.</p>
+      <div style="margin-top:22px">
+        <div class="contact-line">📞 <strong data-i18n="foot.cor">Corporativo:</strong> <a href="tel:+525597222235">55 9722 2235</a></div>
+        <div class="contact-line">✉️ <strong data-i18n="foot.sales">Ventas:</strong> <a href="mailto:ventas@stesso.com.mx">ventas@stesso.com.mx</a></div>
+      </div>
+      <div class="social-row">
+        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+        <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+      </div>
+    </div>
+
+    <div>
+      <h5 data-i18n="foot.col1">Servicios B2B</h5>
+      <ul>
+        <li><a href="#servicios" data-i18n="foot.s1">Limpieza profesional fija</a></li>
+        <li><a href="#servicios" data-i18n="foot.s2">Sanitización y desinfección</a></li>
+        <li><a href="#tecnologia" data-i18n="foot.s3">Drones y robots autónomos</a></li>
+        <li><a href="#servicios" data-i18n="foot.s4">Limpieza técnica en alturas</a></li>
+        <li><a href="#servicios" data-i18n="foot.s5">Cuidado de pisos</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h5 data-i18n="foot.col2">Sectores</h5>
+      <ul>
+        <li><a href="#sectores" data-i18n="foot.x1">Industrial</a></li>
+        <li><a href="#sectores" data-i18n="foot.x2">Alimentos y bebidas</a></li>
+        <li><a href="#sectores" data-i18n="foot.x3">Farmacéutico y salud</a></li>
+        <li><a href="#sectores" data-i18n="foot.x4">Corporativo</a></li>
+        <li><a href="#sectores" data-i18n="foot.x5">Logística y retail</a></li>
+        <li><a href="#sectores" data-i18n="foot.x6">Hotelería</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h5 data-i18n="foot.col3">Empresa</h5>
+      <ul>
+        <li><a href="#credenciales" data-i18n="foot.e1">Certificaciones</a></li>
+        <li><a href="#" data-i18n="foot.e2">Nosotros</a></li>
+        <li><a href="#" data-i18n="foot.e3">Política de calidad</a></li>
+        <li><a href="#blog" data-i18n="foot.e4">Blog corporativo</a></li>
+        <li><a href="#cotizar" data-i18n="foot.e5">Contacto comercial</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container foot-bottom">
+    <div data-i18n="foot.rights">© Stesso® · Servicios de limpieza profesional para empresas. Todos los derechos reservados.</div>
+    <div class="audience-redirect">
+      <span data-i18n="foot.other">¿Otra audiencia?</span>
+      <a href="https://trabajo.stesso.com.mx" rel="nofollow" data-i18n="foot.jobs">Empleo →</a>
+      <span>·</span>
+      <a href="https://franquicias.stesso.com.mx" rel="nofollow" data-i18n="foot.frq">Franquicias →</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ==== FLOATING CONTACT FAB ==== -->
+<div class="fab" id="fab" aria-label="Contacto">
+  <div class="fab-options" role="menu">
+    <a href="tel:+525597222235" class="fab-option" role="menuitem">
+      <span class="icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57-.35-.11-.74-.03-1.02.24l-2.2 2.2c-2.83-1.44-5.15-3.75-6.59-6.59l2.2-2.21c.28-.27.36-.66.25-1.01C8.7 6.45 8.5 5.25 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1z"/></svg></span>
+      <span data-i18n="fab.call">Llamar · 55 9722 2235</span>
+    </a>
+    <a href="https://wa.me/525597222235?text=Hola%2C%20me%20interesa%20un%20servicio%20B2B%20de%20Stesso" target="_blank" rel="noopener" class="fab-option wa" role="menuitem">
+      <span class="icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg></span>
+      <span data-i18n="fab.wa">WhatsApp B2B</span>
+    </a>
+    <a href="#cotizar" class="fab-option quote" role="menuitem">
+      <span class="icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg></span>
+      <span data-i18n="fab.quote">Solicitar cotización</span>
+    </a>
+  </div>
+  <button class="fab-toggle" type="button" aria-expanded="false" aria-label="Contáctanos">
+    <span class="toggle-ic">
+      <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+    </span>
+    <span class="label" data-i18n="fab.contact">Contáctanos</span>
+  </button>
+</div>
+
+<script>
+// Mobile nav toggle
+document.querySelector('.menu-toggle')?.addEventListener('click', () => {
+  const n = document.querySelector('nav.primary');
+  const open = n.style.display === 'flex';
+  n.style.display = open ? '' : 'flex';
+  if(!open){
+    Object.assign(n.style,{
+      flexDirection:'column',position:'absolute',top:'82px',right:'24px',
+      background:'#fff',padding:'14px',borderRadius:'12px',
+      boxShadow:'0 10px 30px rgba(0,0,0,.12)'
+    });
+  }
+});
+
+// Scroll reveal
+const io = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+},{threshold:.12});
+document.querySelectorAll('.fade-up').forEach(el=>io.observe(el));
+
+// Floating contact FAB
+(function(){
+  const fab = document.getElementById('fab');
+  if(!fab) return;
+  const toggle = fab.querySelector('.fab-toggle');
+  const showAfter = 400;
+  function onScroll(){
+    if(window.scrollY > showAfter) fab.classList.add('show');
+    else { fab.classList.remove('show'); fab.classList.remove('open'); toggle.setAttribute('aria-expanded','false'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+  toggle.addEventListener('click', ()=>{
+    const open = fab.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  fab.querySelectorAll('.fab-option').forEach(o=>{
+    o.addEventListener('click', ()=>{
+      fab.classList.remove('open');
+      toggle.setAttribute('aria-expanded','false');
+    });
+  });
+  document.addEventListener('click', e=>{
+    if(!fab.contains(e.target)){ fab.classList.remove('open'); toggle.setAttribute('aria-expanded','false'); }
+  });
+})();
+
+// ====== i18n ======
+const I18N = {
+  en: {
+    'b2bbar.tag':'Exclusive services for companies and institutions',
+    'b2bbar.corp':'Corporate:',
+    'nav.services':'Services','nav.sectors':'Industries','nav.tech':'Technology','nav.certs':'Certifications','nav.clients':'Clients','nav.blog':'Insights','nav.cta':'Get a quote',
+    'hero.eyebrow':'Top 3 · Mexico & Latin America',
+    'hero.h1a':'Specialized cleaning for','hero.h1b':'businesses that can\'t stop.',
+    'hero.lead':'Trained on-site staff, COFEPRIS-certified sanitization, and applied technology — <strong>drones and autonomous robots</strong> — for industrial plants, corporate offices, labs and logistics centers.',
+    'hero.cta1':'Request a corporate quote','hero.cta2':'See services',
+    'hero.stat1':'Years of B2B experience','hero.stat2':'Corporate clients',
+    'form.live':'Reply &lt; 24h','form.badge':'⚡ Corporate advisor',
+    'form.title':'Quote for your company','form.sub':'Technical diagnosis and a proposal tailored to your industry.',
+    'form.l1':'Company','form.l2':'Contact','form.l3':'Corporate email','form.l4':'Phone','form.l5':'Industry / Sector','form.l6':'Service of interest',
+    'form.p1':'Legal name','form.p2':'Your name','form.p3':'name@company.com','form.p4':'+1 555 000 0000',
+    'form.s0':'Select an industry','form.s1':'Industrial / Manufacturing','form.s2':'Food & Beverage','form.s3':'Pharma / Healthcare','form.s4':'Corporate / Offices','form.s5':'Logistics / Distribution centers','form.s6':'Retail / Commercial','form.s7':'Hospitality','form.s8':'Finance / Data centers',
+    'form.v0':'Select a service','form.v1':'Professional on-site cleaning','form.v2':'Sanitization and disinfection','form.v3':'Drone cleaning (facades / heights)','form.v4':'Autonomous cleaning robot','form.v5':'Deep cleaning / Special services',
+    'form.submit':'Send to an advisor →','form.note':'🔒 Information handled exclusively for B2B commercial purposes.',
+    'trust.lbl':'Certified compliance · Verifiable',
+    'trust.iso':'Management system','trust.repseT':'Active REPSE','trust.repseS':'Labor reform','trust.esrT':'Socially Responsible Company','trust.esrS':'CEMEFI distinction','trust.cofS':'Approved products','trust.nomT':'Psychosocial factors','trust.nomS':'STPS compliance',
+    'svc.eyebrow':'B2B Services','svc.h2a':'Professional cleaning','svc.h2b':'+ applied technology','svc.intro':'Trained on-site staff for continuous operations, complemented by specialized services that only a few companies in Mexico offer.',
+    'svc.c1.t':'Professional Cleaning · On-site Staff','svc.c1.p':'Dedicated, trained and supervised teams permanently assigned to your plant, headquarters or facility.',
+    'svc.c1.l1':'Staff trained at our in-house Training Center','svc.c1.l2':'Supervision and measurable monthly reports','svc.c1.l3':'REPSE compliant — no labor risk for your company','svc.c1.l4':'24/7 nationwide coverage',
+    'svc.more1':'Learn about the service',
+    'svc.c2.t':'Certified Sanitization & Disinfection','svc.c2.p':'Elimination of viruses, bacteria and pathogens with COFEPRIS-approved products. For labs, food plants, hospitals and critical areas.',
+    'svc.c2.l1':'ULV nebulization and thermal fogging','svc.c2.l2':'Hospital-grade products · certified per service','svc.c2.l3':'Protocols for food and pharma industries',
+    'svc.more2':'View protocols',
+    'svc.c3.t':'Deep & Detail Cleaning','svc.c3.p':'Space recovery, carpet washing, floor polishing and post-construction cleaning.',
+    'svc.c4.t':'Technical Cleaning at Heights','svc.c4.p':'Certified personnel for rope, scaffold and height work — facades, glazing and structures.',
+    'svc.c5.t':'Floor Care & Treatment','svc.c5.p':'Marble, granite, vinyl, polished concrete. Crystallization, waxing and scheduled maintenance.',
+    'svc.detail':'See details →',
+    'tech.eyebrow':'Applied technology','tech.h2a':'One of the few Mexican companies with our own fleet of','tech.h2b':'drones and autonomous robots','tech.intro':'We cut operational risk, eliminate scaffolds and shorten service times by up to 60%. Few companies in the country offer this.',
+    'tech.tag1':'✈ High-altitude drones','tech.t1':'Vertical Cleaning with Drones','tech.p1':'Facades, solar panels, industrial buildings and high structures. No scaffolds, no area closures, no risks.',
+    'tech.s1a':'Less time vs. traditional method','tech.s1b':'Maximum operating height','tech.s1c':'Scaffolds required',
+    'tech.tag2':'🤖 Autonomous robots','tech.t2':'Autonomous Floor Cleaning Robots','tech.p2':'For hotels, malls, airports and large corporate surfaces. 24/7 operation with telemetry available.',
+    'tech.s2a':'Coverage per cycle','tech.s2b':'Continuous operation','tech.s2c':'Real-time reporting',
+    'sec.eyebrow':'Industries we serve','sec.h2':'Specialists by industry','sec.intro':'Each sector has different standards, risks and regulations. Our teams are trained specifically for each one.',
+    'sec.1t':'Industrial / Manufacturing','sec.1p':'Production plants, high-bay warehouses, operational areas.','sec.1a':'Production lines','sec.1b':'Warehouses',
+    'sec.2t':'Food & Beverage','sec.2p':'Processing plants under GMP and HACCP.','sec.2a':'Food grade','sec.2b':'Packaging',
+    'sec.3t':'Pharma & Healthcare','sec.3p':'Labs, controlled areas and private hospitals.','sec.3a':'Cleanrooms',
+    'sec.4t':'Corporate & Offices','sec.4p':'Corporate buildings, premium offices and coworking.','sec.4a':'Executive image','sec.4b':'Lobbies',
+    'sec.5t':'Logistics & Distribution','sec.5p':'Distribution centers, warehouses and fleets.','sec.5a':'Autonomous robots',
+    'sec.6t':'Retail & Commercial','sec.6p':'Department stores, chains and shopping centers.','sec.6a':'Night cleaning','sec.6b':'Facades',
+    'sec.7t':'Hospitality','sec.7p':'Hotels, restaurants and cinemas.','sec.7a':'Autonomous robot','sec.7b':'Premium areas',
+    'sec.8t':'Finance & Data Centers','sec.8p':'Banks, insurance firms and data centers.','sec.8a':'Restricted areas','sec.8b':'Confidential',
+    'cred.eyebrow':'Compliance & backing','cred.h2a':'We comply so your company','cred.h2b':'takes on no risk.',
+    'cred.intro':'Working with Stesso means outsourcing cleaning with no labor, sanitary or fiscal contingencies. All our certifications are verifiable and active.',
+    'cred.r1t':'ISO 9001:2015 — Quality Management System','cred.r1p':'Documented and externally audited processes. Traceability for every service.',
+    'cred.r2t':'REPSE — Active registration with STPS','cred.r2p':'We are 100% compliant with the subcontracting reform. Your company contracts with no joint liability risk.',
+    'cred.r3t':'Socially Responsible Company (CEMEFI)','cred.r3p':'Active ESR distinction — quality of life, ethics and impact across the value chain.',
+    'cred.r4t':'COFEPRIS · NOM-035','cred.r4p':'Sanitizing products with health registry; compliance with psychosocial factor regulations.',
+    'cred.cta':'Verify for my company',
+    'cred.kpi.h':'Why large corporates choose Stesso','cred.kpi.s':'Measurable operations, zero risk, certified backing.',
+    'cred.kpi.1':'Years in Mexican B2B','cred.kpi.2':'Active corporate clients','cred.kpi.3':'On-site staff','cred.kpi.4':'REPSE incidents',
+    'test.quote':'We\'ve worked with Stesso for several years. They are people who are genuinely interested in the well-being of others; not just as an operation, but as people.',
+    'test.role':'Corporate client · Packaging industry',
+    'cli.eyebrow':'B2B trust','cli.h2a':'Companies that trust','cli.intro':'Leading brands in industry, retail, food, pharma and banking choose Stesso as their cleaning partner.',
+    'why.eyebrow':'How we work','why.h2a':'A B2B process','why.h2b':'clear, no surprises','why.intro':'Built for companies that need operational continuity and zero administrative friction.',
+    'why.1t':'Technical diagnosis','why.1p':'On-site visit, area mapping, frequencies and regulations applicable to your industry.',
+    'why.2t':'Tailored proposal','why.2p':'Staff, equipment, products, KPIs and SLA. No surprises: closed and traceable budget.',
+    'why.3t':'Measurable operation','why.3p':'Supervision, monthly reports and continuous improvement. Tracking platform for your team.',
+    'cta.h2':'Ready to free your team from cleaning operations?','cta.p':'Talk to a B2B advisor and receive a tailored proposal for your company within 24 business hours.','cta.b1':'Get a quote for my company',
+    'blog.eyebrow':'B2B Insights','blog.h2a':'Resources for','blog.h2b':'decision makers','blog.intro':'Cases, regulations and technology comparisons for operations, facilities and procurement leaders.',
+    'blog.all':'View all articles','blog.read':'Read article','blog.readtime':'read',
+    'blog.cat.tech':'Technology','blog.cat.case':'Case study','blog.cat.regs':'Compliance','blog.cat.ind':'Industry',
+    'blog.b1.date':'May 12, 2026','blog.b1.read':'8 min',
+    'blog.b1.t':'How we cut 60% facade cleaning time with drones — real case in a Mexico City corporate tower',
+    'blog.b1.p':'A 22-story tower on Reforma used to require scaffolding every 4 months plus a partial lobby shutdown. Switching to drones changed the cost, risk and time equation. We show the numbers.',
+    'blog.b2.date':'Apr 28, 2026','blog.b2.read':'6 min',
+    'blog.b2.t':'REPSE in cleaning services: 5 points your legal team must review before signing',
+    'blog.b3.date':'Apr 15, 2026','blog.b3.read':'5 min',
+    'blog.b3.t':'Autonomous robots in hospitality: real ROI in a 180-room boutique hotel',
+    'blog.b4.date':'Apr 2, 2026','blog.b4.read':'7 min',
+    'blog.b4.t':'GMP and HACCP: how to certify your cleaning program in a food plant',
+    'blog.b5.date':'Mar 22, 2026','blog.b5.read':'4 min',
+    'blog.b5.t':'Sanitization with COFEPRIS-approved products: why not every disinfectant is legal in Mexico',
+    'fab.contact':'Contact us','fab.call':'Call · +52 55 9722 2235','fab.wa':'WhatsApp B2B','fab.quote':'Request a quote',
+    'foot.about':'Cleaning, sanitization and applied technology services for companies, industry and corporates in Mexico. Verifiable certified compliance.',
+    'foot.cor':'Corporate:','foot.sales':'Sales:',
+    'foot.col1':'B2B Services','foot.col2':'Industries','foot.col3':'Company',
+    'foot.s1':'Permanent on-site cleaning','foot.s2':'Sanitization & disinfection','foot.s3':'Drones & autonomous robots','foot.s4':'Technical height cleaning','foot.s5':'Floor care',
+    'foot.x1':'Industrial','foot.x2':'Food & beverage','foot.x3':'Pharma & healthcare','foot.x4':'Corporate','foot.x5':'Logistics & retail','foot.x6':'Hospitality',
+    'foot.e1':'Certifications','foot.e2':'About us','foot.e3':'Quality policy','foot.e4':'Corporate blog','foot.e5':'Commercial contact',
+    'foot.rights':'© Stesso® · Professional cleaning services for companies. All rights reserved.',
+    'foot.other':'Another audience?','foot.jobs':'Careers →','foot.frq':'Franchises →'
+  }
+};
+
+function applyLang(lang){
+  const dict = I18N[lang];
+  document.documentElement.lang = lang === 'en' ? 'en' : 'es-MX';
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const key = el.getAttribute('data-i18n');
+    if(lang === 'es'){
+      const orig = el.getAttribute('data-i18n-orig');
+      if(orig != null) el.innerHTML = orig;
+    }else if(dict && dict[key] != null){
+      if(!el.hasAttribute('data-i18n-orig')) el.setAttribute('data-i18n-orig', el.innerHTML);
+      el.innerHTML = dict[key];
+    }
+  });
+  document.querySelectorAll('[data-i18n-html]').forEach(el=>{
+    const key = el.getAttribute('data-i18n-html');
+    if(lang === 'es'){
+      const orig = el.getAttribute('data-i18n-orig');
+      if(orig != null) el.innerHTML = orig;
+    }else if(dict && dict[key] != null){
+      if(!el.hasAttribute('data-i18n-orig')) el.setAttribute('data-i18n-orig', el.innerHTML);
+      el.innerHTML = dict[key];
+    }
+  });
+  document.querySelectorAll('[data-i18n-attr]').forEach(el=>{
+    const spec = el.getAttribute('data-i18n-attr'); // e.g. "placeholder|form.p1"
+    const [attr,key] = spec.split('|');
+    if(lang === 'es'){
+      const orig = el.getAttribute('data-i18n-attr-orig');
+      if(orig != null) el.setAttribute(attr, orig);
+    }else if(dict && dict[key] != null){
+      if(!el.hasAttribute('data-i18n-attr-orig')) el.setAttribute('data-i18n-attr-orig', el.getAttribute(attr) || '');
+      el.setAttribute(attr, dict[key]);
+    }
+  });
+  document.querySelectorAll('.lang-switch button').forEach(b=>{
+    b.classList.toggle('active', b.dataset.lang === lang);
+  });
+  try{ localStorage.setItem('stesso.lang', lang); }catch(e){}
+}
+
+document.querySelectorAll('.lang-switch button').forEach(b=>{
+  b.addEventListener('click', ()=> applyLang(b.dataset.lang));
+});
+
+(function(){
+  let initial = 'es';
+  try{ initial = localStorage.getItem('stesso.lang') || (navigator.language||'').toLowerCase().startsWith('en') ? 'en' : 'es'; }catch(e){}
+  if(initial === 'en') applyLang('en');
+  else applyLang('es');
+})();
+</script>
+</body>
+</html>
