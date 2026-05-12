@@ -155,8 +155,30 @@ nav.primary a:hover{background:var(--blue-soft);color:var(--blue)}
 }
 .hero h1 .accent{
   color:transparent;
-  background:linear-gradient(135deg, #7FE6D9 0%, var(--brand-light) 50%, #B4D8FF 100%);
+  background:linear-gradient(120deg, #7FE6D9 0%, var(--brand-light) 30%, #B4D8FF 55%, var(--brand-light) 75%, #7FE6D9 100%);
+  background-size:200% 100%;
   -webkit-background-clip:text;background-clip:text;
+  animation:shimmer 6s ease-in-out infinite;
+}
+@keyframes shimmer{
+  0%,100%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+}
+.eyebrow .dot{animation:pulseDot 2.2s ease-in-out infinite}
+@keyframes pulseDot{
+  0%,100%{transform:scale(1);opacity:1}
+  50%{transform:scale(1.4);opacity:.6}
+}
+
+/* Stagger reveal helper */
+.fade-up[data-stagger]{transition-delay:calc(var(--stagger-i,0) * 70ms)}
+
+/* Count-up number style */
+.count-up{display:inline-block;font-variant-numeric:tabular-nums;will-change:contents}
+.count-up.in{animation:countPop .4s ease}
+@keyframes countPop{
+  0%{transform:translateY(8px);opacity:.5}
+  100%{transform:translateY(0);opacity:1}
 }
 .hero p.lead{font-size:19px;color:#dde5f5;max-width:580px;margin:0 0 32px;line-height:1.55}
 .hero-actions{display:flex;gap:14px;flex-wrap:wrap}
@@ -1621,11 +1643,75 @@ document.querySelector('.menu-toggle')?.addEventListener('click', () => {
   }
 });
 
+// Stagger delay for grid children that share the fade-up class
+['.svc-grid','.sec-grid','.client-grid','.cert-list','.why-grid','.tech-grid','.blog-grid'].forEach(sel=>{
+  document.querySelectorAll(sel).forEach(grid=>{
+    [...grid.children].forEach((child,i)=>{
+      if(child.classList.contains('fade-up') || child.querySelector(':scope > .fade-up')){
+        const target = child.classList.contains('fade-up') ? child : child.querySelector(':scope > .fade-up');
+        target.setAttribute('data-stagger','');
+        target.style.setProperty('--stagger-i', i);
+      }
+    });
+  });
+});
+
 // Scroll reveal
 const io = new IntersectionObserver(entries=>{
   entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
 },{threshold:.12});
 document.querySelectorAll('.fade-up').forEach(el=>io.observe(el));
+
+// ====== Count-up animation for numeric stats ======
+function parseNumeric(text){
+  const m = text.match(/^([+\-$]*)([\d][\d,\.]*)(.*)$/);
+  if(!m) return null;
+  return {prefix:m[1], numStr:m[2], suffix:m[3], target:parseFloat(m[2].replace(/,/g,'')), hasComma:m[2].includes(','), decimals:(m[2].split('.')[1]||'').length};
+}
+function formatNum(val, parts){
+  let str = parts.decimals ? val.toFixed(parts.decimals) : Math.round(val).toString();
+  if(parts.hasComma) str = Number(str.replace(/,/g,'')).toLocaleString('en-US');
+  return parts.prefix + str + parts.suffix;
+}
+function animateCount(el){
+  if(el.dataset.counted) return;
+  const original = el.textContent.trim();
+  const parts = parseNumeric(original);
+  if(!parts || !isFinite(parts.target) || parts.target === 0){ el.dataset.counted = '1'; return; }
+  el.dataset.counted = '1';
+  el.dataset.countOriginal = original;
+  el.classList.add('count-up');
+  // Tab hidden? requestAnimationFrame is paused — fallback to timer-driven loop.
+  const useTimer = document.hidden;
+  const duration = 1500;
+  const start = performance.now();
+  el.textContent = formatNum(0, parts);
+  function tick(now){
+    const t = Math.min(1, ((now||performance.now())-start)/duration);
+    const eased = 1 - Math.pow(1-t, 3);
+    el.textContent = formatNum(parts.target * eased, parts);
+    if(t < 1){
+      if(useTimer) setTimeout(tick, 30);
+      else requestAnimationFrame(tick);
+    } else {
+      el.textContent = original;
+      el.classList.add('in');
+    }
+  }
+  if(useTimer) setTimeout(tick, 30); else requestAnimationFrame(tick);
+}
+
+const countSelectors = ['.hero-stats strong','.kpi strong','.tech-card .spec strong','.why-card .num'];
+const countNodes = document.querySelectorAll(countSelectors.join(','));
+const countIo = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      animateCount(e.target);
+      countIo.unobserve(e.target);
+    }
+  });
+},{threshold:.35});
+countNodes.forEach(n=>countIo.observe(n));
 
 // Floating contact FAB
 (function(){
